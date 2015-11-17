@@ -1,0 +1,860 @@
+|   1 | 1 | Danny approached the chair with a yellow bag            | Danny with bag (left)                               | (a d c) (y b) (h d b)           |
+|   1 | 2 | Danny approached the chair with a yellow bag            | Danny with bag (right)                              | (a d c) (y b) (h d b)           |
+|   1 | 3 | Danny approached the chair with a yellow bag            | chair with bag (left)                               | (a d c) (y b) (h c b)           |
+|   1 | 4 | Danny approached the chair with a yellow bag            | chair with bag (right)                              | (a d c) (y b) (h c b)           |
+|   2 | 1 | Danny approached the chair with a green bag             | Danny with bag (left)                               | (a d c) (g b) (h d b)           |
+|   2 | 2 | Danny approached the chair with a green bag             | Danny with bag (right)                              | (a d c) (g b) (h d b)           |
+|   2 | 3 | Danny approached the chair with a green bag             | chair with bag (left)                               | (a d c) (g b) (h c b)           |
+|   2 | 4 | Danny approached the chair with a green bag             | chair with bag (right)                              | (a d c) (g b) (h c b)           |
+|   3 | 1 | Danny approached the person with a yellow bag           | Danny with bag (left)                               | (a d p) (y b) (h d b)           |
+|   3 | 2 | Danny approached the person with a yellow bag           | Danny with bag (right)                              | (a d p) (y b) (h d b)           |
+|   3 | 3 | Danny approached the person with a yellow bag           | person with bag (left)                              | (a d p) (y b) (h p b)           |
+|   3 | 4 | Danny approached the person with a yellow bag           | person with bag (right)                             | (a d p) (y b) (h p b)           |
+|   4 | 1 | Danny approached the person with a yellow chair         | Danny with chair (left)                             | (a d p) (y c) (h d c)           |
+|   4 | 2 | Danny approached the person with a yellow chair         | Danny with chair (right)                            | (a d p) (y c) (h d c)           |
+|   4 | 3 | Danny approached the person with a yellow chair         | person with chair (left)                            | (a d p) (y c) (h p c)           |
+|   4 | 4 | Danny approached the person with a yellow chair         | person with chair (right)                           | (a d p) (y c) (h p c)           |
+|   5 | 1 | Danny approached the person with a green bag            | Danny with bag (left)                               | (a d p) (g b) (h d b)           |
+|   5 | 2 | Danny approached the person with a green bag            | Danny with bag (right)                              | (a d p) (g b) (h d b)           |
+|   5 | 3 | Danny approached the person with a green bag            | person with bag (left)                              | (a d p) (g b) (h p b)           |
+|   5 | 4 | Danny approached the person with a green bag            | person with bag (right)                             | (a d p) (g b) (h p b)           |
+|   6 | 1 | Danny approached the person with a green chair          | Danny with chair (left)                             | (a d p) (g c) (h d c)           |
+|   6 | 2 | Danny approached the person with a green chair          | Danny with chair (right)                            | (a d p) (g c) (h d c)           |
+|   6 | 3 | Danny approached the person with a green chair          | person with chair (left)                            | (a d p) (g c) (h p c)           |
+|   6 | 4 | Danny approached the person with a green chair          | person with chair (right)                           | (a d p) (g c) (h p c)           |
+|   7 | 1 | Danny left the chair with a yellow bag                  | Danny with bag (left)                               | (l d c) (y b) (h d b)           |
+|   7 | 2 | Danny left the chair with a yellow bag                  | Danny with bag (right)                              | (l d c) (y b) (h d b)           |
+|   7 | 3 | Danny left the chair with a yellow bag                  | chair with bag (left)                               | (l d c) (y b) (h c b)           |
+|   7 | 4 | Danny left the chair with a yellow bag                  | chair with bag (right)                              | (l d c) (y b) (h c b)           |
+|   8 | 1 | Danny left the chair with a green bag                   | Danny with bag (left)                               | (l d c) (g b) (h d b)           |
+|   8 | 2 | Danny left the chair with a green bag                   | Danny with bag (right)                              | (l d c) (g b) (h d b)           |
+|   8 | 3 | Danny left the chair with a green bag                   | chair with bag (left)                               | (l d c) (g b) (h c b)           |
+|   8 | 4 | Danny left the chair with a green bag                   | chair with bag (right)                              | (l d c) (g b) (h c b)           |
+|   9 | 1 | Danny left the person with a yellow bag                 | Danny with bag (left)                               | (l d p) (y b) (h d b)           |
+|   9 | 2 | Danny left the person with a yellow bag                 | Danny with bag (right)                              | (l d p) (y b) (h d b)           |
+|   9 | 3 | Danny left the person with a yellow bag                 | person with bag (left)                              | (l d p) (y b) (h p b)           |
+|   9 | 4 | Danny left the person with a yellow bag                 | person with bag (right)                             | (l d p) (y b) (h p b)           |
+|  10 | 1 | Danny left the person with a yellow chair               | Danny with chair (left)                             | (l d p) (y c) (h d c)           |
+|  10 | 2 | Danny left the person with a yellow chair               | Danny with chair (right)                            | (l d p) (y c) (h d c)           |
+|  10 | 3 | Danny left the person with a yellow chair               | person with chair (left)                            | (l d p) (y c) (h p c)           |
+|  10 | 4 | Danny left the person with a yellow chair               | person with chair (right)                           | (l d p) (y c) (h p c)           |
+|  11 | 1 | Danny left the person with a green bag                  | Danny with bag (left)                               | (l d p) (g b) (h d b)           |
+|  11 | 2 | Danny left the person with a green bag                  | Danny with bag (right)                              | (l d p) (g b) (h d b)           |
+|  11 | 3 | Danny left the person with a green bag                  | person with bag (left)                              | (l d p) (g b) (h p b)           |
+|  11 | 4 | Danny left the person with a green bag                  | person with bag (right)                             | (l d p) (g b) (h p b)           |
+|  12 | 1 | Danny left the person with a green chair                | Danny with chair (left)                             | (l d p) (g c) (h d c)           |
+|  12 | 2 | Danny left the person with a green chair                | Danny with chair (right)                            | (l d p) (g c) (h d c)           |
+|  12 | 3 | Danny left the person with a green chair                | person with chair (left)                            | (l d p) (g c) (h p c)           |
+|  12 | 4 | Danny left the person with a green chair                | person with chair (right)                           | (l d p) (g c) (h p c)           |
+|  13 | 1 | Andrei approached the chair with a yellow bag           | Andrei with bag (left)                              | (y b) (a a c) (h a b)           |
+|  13 | 2 | Andrei approached the chair with a yellow bag           | Andrei with bag (right)                             | (y b) (a a c) (h a b)           |
+|  13 | 3 | Andrei approached the chair with a yellow bag           | chair with bag (left)                               | (y b) (a a c) (h c b)           |
+|  13 | 4 | Andrei approached the chair with a yellow bag           | chair with bag (right)                              | (y b) (a a c) (h c b)           |
+|  14 | 1 | Andrei approached the chair with a green bag            | Andrei with bag (left)                              | (g b) (a a c) (h a b)           |
+|  14 | 2 | Andrei approached the chair with a green bag            | Andrei with bag (right)                             | (g b) (a a c) (h a b)           |
+|  14 | 3 | Andrei approached the chair with a green bag            | chair with bag (left)                               | (g b) (a a c) (h c b)           |
+|  14 | 4 | Andrei approached the chair with a green bag            | chair with bag (right)                              | (g b) (a a c) (h c b)           |
+|  15 | 1 | Andrei approached the person with a yellow bag          | Andrei with bag (left)                              | (y b) (a a p) (h a b)           |
+|  15 | 2 | Andrei approached the person with a yellow bag          | Andrei with bag (right)                             | (y b) (a a p) (h a b)           |
+|  15 | 3 | Andrei approached the person with a yellow bag          | person with bag (left)                              | (y b) (a a p) (h p b)           |
+|  15 | 4 | Andrei approached the person with a yellow bag          | person with bag (right)                             | (y b) (a a p) (h p b)           |
+|  16 | 1 | Andrei approached the person with a yellow chair        | Andrei with chair (left)                            | (y c) (a a p) (h a c)           |
+|  16 | 2 | Andrei approached the person with a yellow chair        | Andrei with chair (right)                           | (y c) (a a p) (h a c)           |
+|  16 | 3 | Andrei approached the person with a yellow chair        | person with chair (left)                            | (y c) (a a p) (h p c)           |
+|  16 | 4 | Andrei approached the person with a yellow chair        | person with chair (right)                           | (y c) (a a p) (h p c)           |
+|  17 | 1 | Andrei approached the person with a green bag           | Andrei with bag (left)                              | (g b) (a a p) (h a b)           |
+|  17 | 2 | Andrei approached the person with a green bag           | Andrei with bag (right)                             | (g b) (a a p) (h a b)           |
+|  17 | 3 | Andrei approached the person with a green bag           | person with bag (left)                              | (g b) (a a p) (h p b)           |
+|  17 | 4 | Andrei approached the person with a green bag           | person with bag (right)                             | (g b) (a a p) (h p b)           |
+|  18 | 1 | Andrei approached the person with a green chair         | Andrei with chair (left)                            | (g c) (a a p) (h a c)           |
+|  18 | 2 | Andrei approached the person with a green chair         | Andrei with chair (right)                           | (g c) (a a p) (h a c)           |
+|  18 | 3 | Andrei approached the person with a green chair         | person with chair (left)                            | (g c) (a a p) (h p c)           |
+|  18 | 4 | Andrei approached the person with a green chair         | person with chair (right)                           | (g c) (a a p) (h p c)           |
+|  19 | 1 | Andrei left the chair with a yellow bag                 | Andrei with bag (left)                              | (y b) (l a c) (h a b)           |
+|  19 | 2 | Andrei left the chair with a yellow bag                 | Andrei with bag (right)                             | (y b) (l a c) (h a b)           |
+|  19 | 3 | Andrei left the chair with a yellow bag                 | chair with bag (left)                               | (y b) (l a c) (h c b)           |
+|  19 | 4 | Andrei left the chair with a yellow bag                 | chair with bag (right)                              | (y b) (l a c) (h c b)           |
+|  20 | 1 | Andrei left the chair with a green bag                  | Andrei with bag (left)                              | (g b) (l a c) (h a b)           |
+|  20 | 2 | Andrei left the chair with a green bag                  | Andrei with bag (right)                             | (g b) (l a c) (h a b)           |
+|  20 | 3 | Andrei left the chair with a green bag                  | chair with bag (left)                               | (g b) (l a c) (h c b)           |
+|  20 | 4 | Andrei left the chair with a green bag                  | chair with bag (right)                              | (g b) (l a c) (h c b)           |
+|  21 | 1 | Andrei left the person with a yellow bag                | Andrei with bag (left)                              | (y b) (h a b) (l a p)           |
+|  21 | 2 | Andrei left the person with a yellow bag                | Andrei with bag (right)                             | (y b) (h a b) (l a p)           |
+|  21 | 3 | Andrei left the person with a yellow bag                | person with bag (left)                              | (y b) (l a p) (h p b)           |
+|  21 | 4 | Andrei left the person with a yellow bag                | person with bag (right)                             | (y b) (l a p) (h p b)           |
+|  22 | 1 | Andrei left the person with a yellow chair              | Andrei with chair (left)                            | (y c) (l a p) (h a c)           |
+|  22 | 2 | Andrei left the person with a yellow chair              | Andrei with chair (right)                           | (y c) (l a p) (h a c)           |
+|  22 | 3 | Andrei left the person with a yellow chair              | person with chair (left)                            | (y c) (l a p) (h p c)           |
+|  22 | 4 | Andrei left the person with a yellow chair              | person with chair (right)                           | (y c) (l a p) (h p c)           |
+|  23 | 1 | Andrei left the person with a green bag                 | Andrei with bag (left)                              | (g b) (h a b) (l a p)           |
+|  23 | 2 | Andrei left the person with a green bag                 | Andrei with bag (right)                             | (g b) (h a b) (l a p)           |
+|  23 | 3 | Andrei left the person with a green bag                 | person with bag (left)                              | (g b) (l a p) (h p b)           |
+|  23 | 4 | Andrei left the person with a green bag                 | person with bag (right)                             | (g b) (l a p) (h p b)           |
+|  24 | 1 | Andrei left the person with a green chair               | Andrei with chair (left)                            | (g c) (l a p) (h a c)           |
+|  24 | 2 | Andrei left the person with a green chair               | Andrei with chair (right)                           | (g c) (l a p) (h a c)           |
+|  24 | 3 | Andrei left the person with a green chair               | person with chair (left)                            | (g c) (l a p) (h p c)           |
+|  24 | 4 | Andrei left the person with a green chair               | person with chair (right)                           | (g c) (l a p) (h p c)           |
+|  25 | 1 | Danny approached the chair with a blue telescope        | Danny with telescope (left)                         | (a d c) (b t) (h d t)           |
+|  25 | 2 | Danny approached the chair with a blue telescope        | Danny with telescope (right)                        | (a d c) (b t) (h d t)           |
+|  25 | 3 | Danny approached the chair with a blue telescope        | chair with telescope (left)                         | (a d c) (b t) (h c t)           |
+|  25 | 4 | Danny approached the chair with a blue telescope        | chair with telescope (right)                        | (a d c) (b t) (h c t)           |
+|  26 | 1 | Danny approached the person with a blue telescope       | Danny with telescope (left)                         | (a d p) (b t) (h d t)           |
+|  26 | 2 | Danny approached the person with a blue telescope       | Danny with telescope (right)                        | (a d p) (b t) (h d t)           |
+|  26 | 3 | Danny approached the person with a blue telescope       | person with telescope (left)                        | (a d p) (b t) (h p t)           |
+|  26 | 4 | Danny approached the person with a blue telescope       | person with telescope (right)                       | (a d p) (b t) (h p t)           |
+|  27 | 1 | Danny left the chair with a blue telescope              | Danny with telescope (left)                         | (l d c) (b t) (h d t)           |
+|  27 | 2 | Danny left the chair with a blue telescope              | Danny with telescope (right)                        | (l d c) (b t) (h d t)           |
+|  27 | 3 | Danny left the chair with a blue telescope              | chair with telescope (left)                         | (l d c) (b t) (h c t)           |
+|  27 | 4 | Danny left the chair with a blue telescope              | chair with telescope (right)                        | (l d c) (b t) (h c t)           |
+|  28 | 1 | Danny left the person with a blue telescope             | Danny with telescope (left)                         | (l d p) (b t) (h d t)           |
+|  28 | 2 | Danny left the person with a blue telescope             | Danny with telescope (right)                        | (l d p) (b t) (h d t)           |
+|  28 | 3 | Danny left the person with a blue telescope             | person with telescope (left)                        | (l d p) (b t) (h p t)           |
+|  28 | 4 | Danny left the person with a blue telescope             | person with telescope (right)                       | (l d p) (b t) (h p t)           |
+|  29 | 1 | Andrei approached the chair with a blue telescope       | Andrei with telescope (left)                        | (a a c) (b t) (h a t)           |
+|  29 | 2 | Andrei approached the chair with a blue telescope       | Andrei with telescope (right)                       | (a a c) (b t) (h a t)           |
+|  29 | 3 | Andrei approached the chair with a blue telescope       | chair with telescope (left)                         | (a a c) (b t) (h c t)           |
+|  29 | 4 | Andrei approached the chair with a blue telescope       | chair with telescope (right)                        | (a a c) (b t) (h c t)           |
+|  30 | 1 | Andrei approached the person with a blue telescope      | Andrei with telescope (left)                        | (a a p) (b t) (h a t)           |
+|  30 | 2 | Andrei approached the person with a blue telescope      | Andrei with telescope (right)                       | (a a p) (b t) (h a t)           |
+|  30 | 3 | Andrei approached the person with a blue telescope      | person with telescope (left)                        | (a a p) (b t) (h p t)           |
+|  30 | 4 | Andrei approached the person with a blue telescope      | person with telescope (right)                       | (a a p) (b t) (h p t)           |
+|  31 | 1 | Andrei left the chair with a blue telescope             | Andrei with telescope (left)                        | (l a c) (b t) (h a t)           |
+|  31 | 2 | Andrei left the chair with a blue telescope             | Andrei with telescope (right)                       | (l a c) (b t) (h a t)           |
+|  31 | 3 | Andrei left the chair with a blue telescope             | chair with telescope (left)                         | (l a c) (b t) (h c t)           |
+|  31 | 4 | Andrei left the chair with a blue telescope             | chair with telescope (right)                        | (l a c) (b t) (h c t)           |
+|  32 | 1 | Andrei left the person with a blue telescope            | Andrei with telescope (left)                        | (l a p) (b t) (h a t)           |
+|  32 | 2 | Andrei left the person with a blue telescope            | Andrei with telescope (right)                       | (l a p) (b t) (h a t)           |
+|  32 | 3 | Andrei left the person with a blue telescope            | person with telescope (left)                        | (l a p) (b t) (h p t)           |
+|  32 | 4 | Andrei left the person with a blue telescope            | person with telescope (right)                       | (l a p) (b t) (h p t)           |
+|  33 | 1 | Danny approached the person holding a yellow bag        | Danny holding bag (left)                            | (y b) (a d p) (h d b)           |
+|  33 | 2 | Danny approached the person holding a yellow bag        | Danny holding bag (right)                           | (y b) (a d p) (h d b)           |
+|  33 | 3 | Danny approached the person holding a yellow bag        | person holding bag (left)                           | (y b) (a d p) (h p b)           |
+|  33 | 4 | Danny approached the person holding a yellow bag        | person holding bag (right)                          | (y b) (a d p) (h p b)           |
+|  34 | 1 | Danny approached the person holding a yellow chair      | Danny holding chair (left)                          | (y c) (a d p) (h d c)           |
+|  34 | 2 | Danny approached the person holding a yellow chair      | Danny holding chair (right)                         | (y c) (a d p) (h d c)           |
+|  34 | 3 | Danny approached the person holding a yellow chair      | person holding chair (left)                         | (y c) (a d p) (h p c)           |
+|  34 | 4 | Danny approached the person holding a yellow chair      | person holding chair (right)                        | (y c) (a d p) (h p c)           |
+|  35 | 1 | Danny approached the person holding a green bag         | Danny holding bag (left)                            | (g b) (a d p) (h d b)           |
+|  35 | 2 | Danny approached the person holding a green bag         | Danny holding bag (right)                           | (g b) (a d p) (h d b)           |
+|  35 | 3 | Danny approached the person holding a green bag         | person holding bag (left)                           | (g b) (a d p) (h p b)           |
+|  35 | 4 | Danny approached the person holding a green bag         | person holding bag (right)                          | (g b) (a d p) (h p b)           |
+|  36 | 1 | Danny approached the person holding a green chair       | Danny holding chair (left)                          | (g c) (a d p) (h d c)           |
+|  36 | 2 | Danny approached the person holding a green chair       | Danny holding chair (right)                         | (g c) (a d p) (h d c)           |
+|  36 | 3 | Danny approached the person holding a green chair       | person holding chair (left)                         | (g c) (a d p) (h p c)           |
+|  36 | 4 | Danny approached the person holding a green chair       | person holding chair (right)                        | (g c) (a d p) (h p c)           |
+|  37 | 1 | Danny left the person holding a yellow bag              | Danny holding bag (left)                            | (l d p) (y b) (h d b)           |
+|  37 | 2 | Danny left the person holding a yellow bag              | Danny holding bag (right)                           | (l d p) (y b) (h d b)           |
+|  37 | 3 | Danny left the person holding a yellow bag              | person holding bag (left)                           | (l d p) (y b) (h p b)           |
+|  37 | 4 | Danny left the person holding a yellow bag              | person holding bag (right)                          | (l d p) (y b) (h p b)           |
+|  38 | 1 | Danny left the person holding a yellow chair            | Danny holding chair (left)                          | (l d p) (y c) (h d c)           |
+|  38 | 2 | Danny left the person holding a yellow chair            | Danny holding chair (right)                         | (l d p) (y c) (h d c)           |
+|  38 | 3 | Danny left the person holding a yellow chair            | person holding chair (left)                         | (l d p) (y c) (h p c)           |
+|  38 | 4 | Danny left the person holding a yellow chair            | person holding chair (right)                        | (l d p) (y c) (h p c)           |
+|  39 | 1 | Danny left the person holding a green bag               | Danny holding bag (left)                            | (l d p) (g b) (h d b)           |
+|  39 | 2 | Danny left the person holding a green bag               | Danny holding bag (right)                           | (l d p) (g b) (h d b)           |
+|  39 | 3 | Danny left the person holding a green bag               | person holding bag (left)                           | (l d p) (g b) (h p b)           |
+|  39 | 4 | Danny left the person holding a green bag               | person holding bag (right)                          | (l d p) (g b) (h p b)           |
+|  40 | 1 | Danny left the person holding a green chair             | Danny holding chair (left)                          | (l d p) (g c) (h d c)           |
+|  40 | 2 | Danny left the person holding a green chair             | Danny holding chair (right)                         | (l d p) (g c) (h d c)           |
+|  40 | 3 | Danny left the person holding a green chair             | person holding chair (left)                         | (l d p) (g c) (h p c)           |
+|  40 | 4 | Danny left the person holding a green chair             | person holding chair (right)                        | (l d p) (g c) (h p c)           |
+|  41 | 1 | Andrei approached the person holding a yellow bag       | Andrei holding bag (left)                           | (y b) (a a p) (h a b)           |
+|  41 | 2 | Andrei approached the person holding a yellow bag       | Andrei holding bag (right)                          | (y b) (a a p) (h a b)           |
+|  41 | 3 | Andrei approached the person holding a yellow bag       | person holding bag (left)                           | (y b) (a a p) (h p b)           |
+|  41 | 4 | Andrei approached the person holding a yellow bag       | person holding bag (right)                          | (y b) (a a p) (h p b)           |
+|  42 | 1 | Andrei approached the person holding a yellow chair     | Andrei holding chair (left)                         | (y c) (a a p) (h a c)           |
+|  42 | 2 | Andrei approached the person holding a yellow chair     | Andrei holding chair (right)                        | (y c) (a a p) (h a c)           |
+|  42 | 3 | Andrei approached the person holding a yellow chair     | person holding chair (left)                         | (y c) (a a p) (h p c)           |
+|  42 | 4 | Andrei approached the person holding a yellow chair     | person holding chair (right)                        | (y c) (a a p) (h p c)           |
+|  43 | 1 | Andrei approached the person holding a green bag        | Andrei holding bag (left)                           | (g b) (a a p) (h a b)           |
+|  43 | 2 | Andrei approached the person holding a green bag        | Andrei holding bag (right)                          | (g b) (a a p) (h a b)           |
+|  43 | 3 | Andrei approached the person holding a green bag        | person holding bag (left)                           | (g b) (a a p) (h p b)           |
+|  43 | 4 | Andrei approached the person holding a green bag        | person holding bag (right)                          | (g b) (a a p) (h p b)           |
+|  44 | 1 | Andrei approached the person holding a green chair      | Andrei holding chair (left)                         | (g c) (a a p) (h a c)           |
+|  44 | 2 | Andrei approached the person holding a green chair      | Andrei holding chair (right)                        | (g c) (a a p) (h a c)           |
+|  44 | 3 | Andrei approached the person holding a green chair      | person holding chair (left)                         | (g c) (a a p) (h p c)           |
+|  44 | 4 | Andrei approached the person holding a green chair      | person holding chair (right)                        | (g c) (a a p) (h p c)           |
+|  45 | 1 | Andrei left the person holding a yellow bag             | Andrei holding bag (left)                           | (y b) (l a p) (h a b)           |
+|  45 | 2 | Andrei left the person holding a yellow bag             | Andrei holding bag (right)                          | (y b) (l a p) (h a b)           |
+|  45 | 3 | Andrei left the person holding a yellow bag             | person holding bag (left)                           | (y b) (l a p) (h p b)           |
+|  45 | 4 | Andrei left the person holding a yellow bag             | person holding bag (right)                          | (y b) (l a p) (h p b)           |
+|  46 | 1 | Andrei left the person holding a yellow chair           | Andrei holding chair (left)                         | (y c) (l a p) (h a c)           |
+|  46 | 2 | Andrei left the person holding a yellow chair           | Andrei holding chair (right)                        | (y c) (l a p) (h a c)           |
+|  46 | 3 | Andrei left the person holding a yellow chair           | person holding chair (left)                         | (y c) (l a p) (h p c)           |
+|  46 | 4 | Andrei left the person holding a yellow chair           | person holding chair (right)                        | (y c) (l a p) (h p c)           |
+|  47 | 1 | Andrei left the person holding a green bag              | Andrei holding bag (left)                           | (g b) (l a p) (h a b)           |
+|  47 | 2 | Andrei left the person holding a green bag              | Andrei holding bag (right)                          | (g b) (l a p) (h a b)           |
+|  47 | 3 | Andrei left the person holding a green bag              | person holding bag (left)                           | (g b) (l a p) (h p b)           |
+|  47 | 4 | Andrei left the person holding a green bag              | person holding bag (right)                          | (g b) (l a p) (h p b)           |
+|  48 | 1 | Andrei left the person holding a green chair            | Andrei holding chair (left)                         | (g c) (l a p) (h a c)           |
+|  48 | 2 | Andrei left the person holding a green chair            | Andrei holding chair (right)                        | (g c) (l a p) (h a c)           |
+|  48 | 3 | Andrei left the person holding a green chair            | person holding chair (left)                         | (g c) (l a p) (h p c)           |
+|  48 | 4 | Andrei left the person holding a green chair            | person holding chair (right)                        | (g c) (l a p) (h p c)           |
+|  49 | 1 | Danny approached the person holding a blue telescope    | Danny holding telescope (left)                      | (a d p) (b t) (h d t)           |
+|  49 | 2 | Danny approached the person holding a blue telescope    | Danny holding telescope (right)                     | (a d p) (b t) (h d t)           |
+|  49 | 3 | Danny approached the person holding a blue telescope    | NNP2 holding telescope (left)                       | (a d p) (b t) (h p t)           |
+|  49 | 4 | Danny approached the person holding a blue telescope    | NNP2 holding telescope (right)                      | (a d p) (b t) (h p t)           |
+|  50 | 1 | Danny left the person holding a blue telescope          | Danny holding telescope (left)                      | (l d p) (b t) (h d t)           |
+|  50 | 2 | Danny left the person holding a blue telescope          | Danny holding telescope (right)                     | (l d p) (b t) (h d t)           |
+|  50 | 3 | Danny left the person holding a blue telescope          | NNP2 holding telescope (left)                       | (l d p) (b t) (h p t)           |
+|  50 | 4 | Danny left the person holding a blue telescope          | NNP2 holding telescope (right)                      | (l d p) (b t) (h p t)           |
+|  51 | 1 | Andrei approached the person holding a blue telescope   | Andrei holding telescope (left)                     | (a a p) (b t) (h a t)           |
+|  51 | 2 | Andrei approached the person holding a blue telescope   | Andrei holding telescope (right)                    | (a a p) (b t) (h a t)           |
+|  51 | 3 | Andrei approached the person holding a blue telescope   | NNP2 holding telescope (left)                       | (a a p) (b t) (h p t)           |
+|  51 | 4 | Andrei approached the person holding a blue telescope   | NNP2 holding telescope (right)                      | (a a p) (b t) (h p t)           |
+|  52 | 1 | Andrei left the person holding a blue telescope         | Andrei holding telescope (left)                     | (l a p) (b t) (h a t)           |
+|  52 | 2 | Andrei left the person holding a blue telescope         | Andrei holding telescope (right)                    | (l a p) (b t) (h a t)           |
+|  52 | 3 | Andrei left the person holding a blue telescope         | NNP2 holding telescope (left)                       | (l a p) (b t) (h p t)           |
+|  52 | 4 | Andrei left the person holding a blue telescope         | NNP2 holding telescope (right)                      | (l a p) (b t) (h p t)           |
+|  53 | 1 | Danny looked at Andrei moving a yellow bag              | Danny moving bag (left)                             | (y b) (la d a) (m d b)          |
+|  53 | 2 | Danny looked at Andrei moving a yellow bag              | Danny moving bag (right)                            | (y b) (la d a) (m d b)          |
+|  53 | 3 | Danny looked at Andrei moving a yellow bag              | Andrei moving bag (left)                            | (y b) (la d a) (m a b)          |
+|  53 | 4 | Danny looked at Andrei moving a yellow bag              | Andrei moving bag (right)                           | (y b) (la d a) (m a b)          |
+|  54 | 1 | Danny looked at Andrei moving a yellow chair            | Danny moving chair (left)                           | (y c) (la d a) (m d c)          |
+|  54 | 2 | Danny looked at Andrei moving a yellow chair            | Danny moving chair (right)                          | (y c) (la d a) (m d c)          |
+|  54 | 3 | Danny looked at Andrei moving a yellow chair            | Andrei moving chair (left)                          | (y c) (la d a) (m a c)          |
+|  54 | 4 | Danny looked at Andrei moving a yellow chair            | Andrei moving chair (right)                         | (y c) (la d a) (m a c)          |
+|  55 | 1 | Danny looked at Andrei moving a green bag               | Danny moving bag (left)                             | (g b) (la d a) (m d b)          |
+|  55 | 2 | Danny looked at Andrei moving a green bag               | Danny moving bag (right)                            | (g b) (la d a) (m d b)          |
+|  55 | 3 | Danny looked at Andrei moving a green bag               | Andrei moving bag (left)                            | (g b) (la d a) (m a b)          |
+|  55 | 4 | Danny looked at Andrei moving a green bag               | Andrei moving bag (right)                           | (g b) (la d a) (m a b)          |
+|  56 | 1 | Danny looked at Andrei moving a green chair             | Danny moving chair (left)                           | (g c) (la d a) (m d c)          |
+|  56 | 2 | Danny looked at Andrei moving a green chair             | Danny moving chair (right)                          | (g c) (la d a) (m d c)          |
+|  56 | 3 | Danny looked at Andrei moving a green chair             | Andrei moving chair (left)                          | (g c) (la d a) (m a c)          |
+|  56 | 4 | Danny looked at Andrei moving a green chair             | Andrei moving chair (right)                         | (g c) (la d a) (m a c)          |
+|  57 | 1 | Danny looked at Andrei picking-up a yellow bag          | Danny picking-up bag (left)                         | (y b) (la d a) (pu d b)         |
+|  57 | 2 | Danny looked at Andrei picking-up a yellow bag          | Danny picking-up bag (right)                        | (y b) (la d a) (pu d b)         |
+|  57 | 3 | Danny looked at Andrei picking-up a yellow bag          | Andrei picking-up bag (left)                        | (y b) (la d a) (pu a b)         |
+|  57 | 4 | Danny looked at Andrei picking-up a yellow bag          | Andrei picking-up bag (right)                       | (y b) (la d a) (pu a b)         |
+|  58 | 1 | Danny looked at Andrei picking-up a yellow chair        | Danny picking-up chair (left)                       | (y c) (la d a) (pu d c)         |
+|  58 | 2 | Danny looked at Andrei picking-up a yellow chair        | Danny picking-up chair (right)                      | (y c) (la d a) (pu d c)         |
+|  58 | 3 | Danny looked at Andrei picking-up a yellow chair        | Andrei picking-up chair (left)                      | (y c) (la d a) (pu a c)         |
+|  58 | 4 | Danny looked at Andrei picking-up a yellow chair        | Andrei picking-up chair (right)                     | (y c) (la d a) (pu a c)         |
+|  59 | 1 | Danny looked at Andrei picking-up a green bag           | Danny picking-up bag (left)                         | (g b) (la d a) (pu d b)         |
+|  59 | 2 | Danny looked at Andrei picking-up a green bag           | Danny picking-up bag (right)                        | (g b) (la d a) (pu d b)         |
+|  59 | 3 | Danny looked at Andrei picking-up a green bag           | Andrei picking-up bag (left)                        | (g b) (la d a) (pu a b)         |
+|  59 | 4 | Danny looked at Andrei picking-up a green bag           | Andrei picking-up bag (right)                       | (g b) (la d a) (pu a b)         |
+|  60 | 1 | Danny looked at Andrei picking-up a green chair         | Danny picking-up chair (left)                       | (g c) (la d a) (pu d c)         |
+|  60 | 2 | Danny looked at Andrei picking-up a green chair         | Danny picking-up chair (right)                      | (g c) (la d a) (pu d c)         |
+|  60 | 3 | Danny looked at Andrei picking-up a green chair         | Andrei picking-up chair (left)                      | (g c) (la d a) (pu a c)         |
+|  60 | 4 | Danny looked at Andrei picking-up a green chair         | Andrei picking-up chair (right)                     | (g c) (la d a) (pu a c)         |
+|  61 | 1 | Danny looked at Andrei putting-down a yellow bag        | Danny putting-down bag (left)                       | (y b) (la d a) (pd d b)         |
+|  61 | 2 | Danny looked at Andrei putting-down a yellow bag        | Danny putting-down bag (right)                      | (y b) (la d a) (pd d b)         |
+|  61 | 3 | Danny looked at Andrei putting-down a yellow bag        | Andrei putting-down bag (left)                      | (y b) (la d a) (pd a b)         |
+|  61 | 4 | Danny looked at Andrei putting-down a yellow bag        | Andrei putting-down bag (right)                     | (y b) (la d a) (pd a b)         |
+|  62 | 1 | Danny looked at Andrei putting-down a yellow chair      | Danny putting-down chair (left)                     | (y c) (la d a) (pd d c)         |
+|  62 | 2 | Danny looked at Andrei putting-down a yellow chair      | Danny putting-down chair (right)                    | (y c) (la d a) (pd d c)         |
+|  62 | 3 | Danny looked at Andrei putting-down a yellow chair      | Andrei putting-down chair (left)                    | (y c) (la d a) (pd a c)         |
+|  62 | 4 | Danny looked at Andrei putting-down a yellow chair      | Andrei putting-down chair (right)                   | (y c) (la d a) (pd d c)         |
+|  63 | 1 | Danny looked at Andrei putting-down a green bag         | Danny putting-down bag (left)                       | (g b) (la d a) (pd d b)         |
+|  63 | 2 | Danny looked at Andrei putting-down a green bag         | Danny putting-down bag (right)                      | (g b) (la d a) (pd d b)         |
+|  63 | 3 | Danny looked at Andrei putting-down a green bag         | Andrei putting-down bag (left)                      | (g b) (la d a) (pd a b)         |
+|  63 | 4 | Danny looked at Andrei putting-down a green bag         | Andrei putting-down bag (right)                     | (g b) (la d a) (pd a b)         |
+|  64 | 1 | Danny looked at Andrei putting-down a green chair       | Danny putting-down chair (left)                     | (g c) (la d a) (pd d c)         |
+|  64 | 2 | Danny looked at Andrei putting-down a green chair       | Danny putting-down chair (right)                    | (g c) (la d a) (pd d c)         |
+|  64 | 3 | Danny looked at Andrei putting-down a green chair       | Andrei putting-down chair (left)                    | (g c) (la d a) (pd d c)         |
+|  64 | 4 | Danny looked at Andrei putting-down a green chair       | Andrei putting-down chair (right)                   | (g c) (la d a) (pd d c)         |
+|  65 | 1 | Danny looked at Andrei holding a yellow bag             | Danny holding bag (left)                            | (y b) (h d b) (la d a)          |
+|  65 | 2 | Danny looked at Andrei holding a yellow bag             | Danny holding bag (right)                           | (y b) (h d b) (la d a)          |
+|  65 | 3 | Danny looked at Andrei holding a yellow bag             | Andrei holding bag (left)                           | (y b) (h a b) (la d a)          |
+|  65 | 4 | Danny looked at Andrei holding a yellow bag             | Andrei holding bag (right)                          | (y b) (h a b) (la d a)          |
+|  66 | 1 | Danny looked at Andrei holding a yellow chair           | Danny holding chair (left)                          | (y c) (h d c) (la d a)          |
+|  66 | 2 | Danny looked at Andrei holding a yellow chair           | Danny holding chair (right)                         | (y c) (h d c) (la d a)          |
+|  66 | 3 | Danny looked at Andrei holding a yellow chair           | Andrei holding chair (left)                         | (y c) (h a c) (la d a)          |
+|  66 | 4 | Danny looked at Andrei holding a yellow chair           | Andrei holding chair (right)                        | (y c) (h a c) (la d a)          |
+|  67 | 1 | Danny looked at Andrei holding a green bag              | Danny holding bag (left)                            | (g b) (h d b) (la d a)          |
+|  67 | 2 | Danny looked at Andrei holding a green bag              | Danny holding bag (right)                           | (g b) (h d b) (la d a)          |
+|  67 | 3 | Danny looked at Andrei holding a green bag              | Andrei holding bag (left)                           | (g b) (h a b) (la d a)          |
+|  67 | 4 | Danny looked at Andrei holding a green bag              | Andrei holding bag (right)                          | (g b) (h a b) (la d a)          |
+|  68 | 1 | Danny looked at Andrei holding a green chair            | Danny holding chair (left)                          | (g c) (h d c) (la d a)          |
+|  68 | 2 | Danny looked at Andrei holding a green chair            | Danny holding chair (right)                         | (g c) (h d c) (la d a)          |
+|  68 | 3 | Danny looked at Andrei holding a green chair            | Andrei holding chair (left)                         | (g c) (h a c) (la d a)          |
+|  68 | 4 | Danny looked at Andrei holding a green chair            | Andrei holding chair (right)                        | (g c) (h a c) (la d a)          |
+|  69 | 1 | Andrei looked at Danny moving a yellow bag              | Andrei moving bag (left)                            | (y b) (m a b) (la a d)          |
+|  69 | 2 | Andrei looked at Danny moving a yellow bag              | Andrei moving bag (right)                           | (y b) (m a b) (la a d)          |
+|  69 | 3 | Andrei looked at Danny moving a yellow bag              | Danny moving bag (left)                             | (y b) (m d b) (la a d)          |
+|  69 | 4 | Andrei looked at Danny moving a yellow bag              | Danny moving bag (right)                            | (y b) (m d b) (la a d)          |
+|  70 | 1 | Andrei looked at Danny moving a yellow chair            | Andrei moving chair (left)                          | (y c) (m a c) (la a d)          |
+|  70 | 2 | Andrei looked at Danny moving a yellow chair            | Andrei moving chair (right)                         | (y c) (m a c) (la a d)          |
+|  70 | 3 | Andrei looked at Danny moving a yellow chair            | Danny moving chair (left)                           | (y c) (m d c) (la a d)          |
+|  70 | 4 | Andrei looked at Danny moving a yellow chair            | Danny moving chair (right)                          | (y c) (m d c) (la a d)          |
+|  71 | 1 | Andrei looked at Danny moving a green bag               | Andrei moving bag (left)                            | (g b) (m a b) (la a d)          |
+|  71 | 2 | Andrei looked at Danny moving a green bag               | Andrei moving bag (right)                           | (g b) (m a b) (la a d)          |
+|  71 | 3 | Andrei looked at Danny moving a green bag               | Danny moving bag (left)                             | (g b) (m d b) (la a d)          |
+|  71 | 4 | Andrei looked at Danny moving a green bag               | Danny moving bag (right)                            | (g b) (m d b) (la a d)          |
+|  72 | 1 | Andrei looked at Danny moving a green chair             | Andrei moving chair (left)                          | (g c) (m a c) (la a d)          |
+|  72 | 2 | Andrei looked at Danny moving a green chair             | Andrei moving chair (right)                         | (g c) (m a c) (la a d)          |
+|  72 | 3 | Andrei looked at Danny moving a green chair             | Danny moving chair (left)                           | (g c) (m d c) (la a d)          |
+|  72 | 4 | Andrei looked at Danny moving a green chair             | Danny moving chair (right)                          | (g c) (m d c) (la a d)          |
+|  73 | 1 | Andrei looked at Danny picking-up a yellow bag          | Andrei picking-up bag (left)                        | (y b) (pu a b) (la a d)         |
+|  73 | 2 | Andrei looked at Danny picking-up a yellow bag          | Andrei picking-up bag (right)                       | (y b) (pu a b) (la a d)         |
+|  73 | 3 | Andrei looked at Danny picking-up a yellow bag          | Danny picking-up bag (left)                         | (y b) (pu d b) (la a d)         |
+|  73 | 4 | Andrei looked at Danny picking-up a yellow bag          | Danny picking-up bag (right)                        | (y b) (pu d b) (la a d)         |
+|  74 | 1 | Andrei looked at Danny picking-up a yellow chair        | Andrei picking-up chair (left)                      | (y c) (pu a c) (la a d)         |
+|  74 | 2 | Andrei looked at Danny picking-up a yellow chair        | Andrei picking-up chair (right)                     | (y c) (pu a c) (la a d)         |
+|  74 | 3 | Andrei looked at Danny picking-up a yellow chair        | Danny picking-up chair (left)                       | (y c) (pu d c) (la a d)         |
+|  74 | 4 | Andrei looked at Danny picking-up a yellow chair        | Danny picking-up chair (right)                      | (y c) (pu d c) (la a d)         |
+|  75 | 1 | Andrei looked at Danny picking-up a green bag           | Andrei picking-up bag (left)                        | (g b) (pu a b) (la a d)         |
+|  75 | 2 | Andrei looked at Danny picking-up a green bag           | Andrei picking-up bag (right)                       | (g b) (pu a b) (la a d)         |
+|  75 | 3 | Andrei looked at Danny picking-up a green bag           | Danny picking-up bag (left)                         | (g b) (pu d b) (la a d)         |
+|  75 | 4 | Andrei looked at Danny picking-up a green bag           | Danny picking-up bag (right)                        | (g b) (pu d b) (la a d)         |
+|  76 | 1 | Andrei looked at Danny picking-up a green chair         | Andrei picking-up chair (left)                      | (g c) (pu a c) (la a d)         |
+|  76 | 2 | Andrei looked at Danny picking-up a green chair         | Andrei picking-up chair (right)                     | (g c) (pu a c) (la a d)         |
+|  76 | 3 | Andrei looked at Danny picking-up a green chair         | Danny picking-up chair (left)                       | (g c) (pu d c) (la a d)         |
+|  76 | 4 | Andrei looked at Danny picking-up a green chair         | Danny picking-up chair (right)                      | (g c) (pu d c) (la a d)         |
+|  77 | 1 | Andrei looked at Danny putting-down a yellow bag        | Andrei putting-down bag (left)                      | (y b) (pd a b) (la a d)         |
+|  77 | 2 | Andrei looked at Danny putting-down a yellow bag        | Andrei putting-down bag (right)                     | (y b) (pd a b) (la a d)         |
+|  77 | 3 | Andrei looked at Danny putting-down a yellow bag        | Danny putting-down bag (left)                       | (y b) (pd d b) (la a d)         |
+|  77 | 4 | Andrei looked at Danny putting-down a yellow bag        | Danny putting-down bag (right)                      | (y b) (pd d b) (la a d)         |
+|  78 | 1 | Andrei looked at Danny putting-down a yellow chair      | Andrei putting-down chair (left)                    | (y c) (pd d c) (la a d)         |
+|  78 | 2 | Andrei looked at Danny putting-down a yellow chair      | Andrei putting-down chair (right)                   | (y c) (pd d c) (la a d)         |
+|  78 | 3 | Andrei looked at Danny putting-down a yellow chair      | Danny putting-down chair (left)                     | (y c) (pd d c) (la a d)         |
+|  78 | 4 | Andrei looked at Danny putting-down a yellow chair      | Danny putting-down chair (right)                    | (y c) (pd d c) (la a d)         |
+|  79 | 1 | Andrei looked at Danny putting-down a green bag         | Andrei putting-down bag (left)                      | (g b) (pd a b) (la a d)         |
+|  79 | 2 | Andrei looked at Danny putting-down a green bag         | Andrei putting-down bag (right)                     | (g b) (pd a b) (la a d)         |
+|  79 | 3 | Andrei looked at Danny putting-down a green bag         | Danny putting-down bag (left)                       | (g b) (pd d b) (la a d)         |
+|  79 | 4 | Andrei looked at Danny putting-down a green bag         | Danny putting-down bag (right)                      | (g b) (pd d b) (la a d)         |
+|  80 | 1 | Andrei looked at Danny putting-down a green chair       | Andrei putting-down chair (left)                    | (g c) (pd d c) (la a d)         |
+|  80 | 2 | Andrei looked at Danny putting-down a green chair       | Andrei putting-down chair (right)                   | (g c) (pd d c) (la a d)         |
+|  80 | 3 | Andrei looked at Danny putting-down a green chair       | Danny putting-down chair (left)                     | (g c) (pd d c) (la a d)         |
+|  80 | 4 | Andrei looked at Danny putting-down a green chair       | Danny putting-down chair (right)                    | (g c) (pd d c) (la a d)         |
+|  81 | 1 | Andrei looked at Danny holding a yellow bag             | Andrei holding bag (left)                           | (y b) (h a b) (la a d)          |
+|  81 | 2 | Andrei looked at Danny holding a yellow bag             | Andrei holding bag (right)                          | (y b) (h a b) (la a d)          |
+|  81 | 3 | Andrei looked at Danny holding a yellow bag             | Danny holding bag (left)                            | (y b) (h d b) (la a d)          |
+|  81 | 4 | Andrei looked at Danny holding a yellow bag             | Danny holding bag (right)                           | (y b) (h d b) (la a d)          |
+|  82 | 1 | Andrei looked at Danny holding a yellow chair           | Andrei holding chair (left)                         | (y c) (h a c) (la a d)          |
+|  82 | 2 | Andrei looked at Danny holding a yellow chair           | Andrei holding chair (right)                        | (y c) (h a c) (la a d)          |
+|  82 | 3 | Andrei looked at Danny holding a yellow chair           | Danny holding chair (left)                          | (y c) (h d c) (la a d)          |
+|  82 | 4 | Andrei looked at Danny holding a yellow chair           | Danny holding chair (right)                         | (y c) (h d c) (la a d)          |
+|  83 | 1 | Andrei looked at Danny holding a green bag              | Andrei holding bag (left)                           | (g b) (h a b) (la a d)          |
+|  83 | 2 | Andrei looked at Danny holding a green bag              | Andrei holding bag (right)                          | (g b) (h a b) (la a d)          |
+|  83 | 3 | Andrei looked at Danny holding a green bag              | Danny holding bag (left)                            | (g b) (h d b) (la a d)          |
+|  83 | 4 | Andrei looked at Danny holding a green bag              | Danny holding bag (right)                           | (g b) (h d b) (la a d)          |
+|  84 | 1 | Andrei looked at Danny holding a green chair            | Andrei holding chair (left)                         | (g c) (h a c) (la a d)          |
+|  84 | 2 | Andrei looked at Danny holding a green chair            | Andrei holding chair (right)                        | (g c) (h a c) (la a d)          |
+|  84 | 3 | Andrei looked at Danny holding a green chair            | Danny holding chair (left)                          | (g c) (h d c) (la a d)          |
+|  84 | 4 | Andrei looked at Danny holding a green chair            | Danny holding chair (right)                         | (g c) (h d c) (la a d)          |
+|  85 | 1 | Danny looked at Andrei moving a blue telescope          | Danny moving telescope (left)                       | (b t) (la d a) (m d t)          |
+|  85 | 2 | Danny looked at Andrei moving a blue telescope          | Danny moving telescope (right)                      | (b t) (la d a) (m d t)          |
+|  85 | 3 | Danny looked at Andrei moving a blue telescope          | Andrei moving telescope (left)                      | (b t) (la d a) (m a t)          |
+|  85 | 4 | Danny looked at Andrei moving a blue telescope          | Andrei moving telescope (right)                     | (b t) (la d a) (m a t)          |
+|  86 | 1 | Danny looked at Andrei picking-up a blue telescope      | Danny picking-up telescope (left)                   | (b t) (la d a) (pu d t)         |
+|  86 | 2 | Danny looked at Andrei picking-up a blue telescope      | Danny picking-up telescope (right)                  | (b t) (la d a) (pu d t)         |
+|  86 | 3 | Danny looked at Andrei picking-up a blue telescope      | Andrei picking-up telescope (left)                  | (b t) (la d a) (pu a t)         |
+|  86 | 4 | Danny looked at Andrei picking-up a blue telescope      | Andrei picking-up telescope (right)                 | (b t) (la d a) (pu a t)         |
+|  87 | 1 | Danny looked at Andrei putting-down a blue telescope    | Danny putting-down telescope (left)                 | (b t) (la d a) (pd d t)         |
+|  87 | 2 | Danny looked at Andrei putting-down a blue telescope    | Danny putting-down telescope (right)                | (b t) (la d a) (pd d t)         |
+|  87 | 3 | Danny looked at Andrei putting-down a blue telescope    | Andrei putting-down telescope (left)                | (b t) (la d a) (pd a t)         |
+|  87 | 4 | Danny looked at Andrei putting-down a blue telescope    | Andrei putting-down telescope (right)               | (b t) (la d a) (pd a t)         |
+|  88 | 1 | Danny looked at Andrei holding a blue telescope         | Danny holding telescope (left)                      | (b t) (h d t) (la d a)          |
+|  88 | 2 | Danny looked at Andrei holding a blue telescope         | Danny holding telescope (right)                     | (b t) (h d t) (la d a)          |
+|  88 | 3 | Danny looked at Andrei holding a blue telescope         | Andrei holding telescope (left)                     | (b t) (h a t) (la d a)          |
+|  88 | 4 | Danny looked at Andrei holding a blue telescope         | Andrei holding telescope (right)                    | (b t) (h a t) (la d a)          |
+|  89 | 1 | Andrei looked at Danny moving a blue telescope          | Andrei moving telescope (left)                      | (b t) (la a d) (m a t)          |
+|  89 | 2 | Andrei looked at Danny moving a blue telescope          | Andrei moving telescope (right)                     | (b t) (la a d) (m a t)          |
+|  89 | 3 | Andrei looked at Danny moving a blue telescope          | Danny moving telescope (left)                       | (b t) (la a d) (m d t)          |
+|  89 | 4 | Andrei looked at Danny moving a blue telescope          | Danny moving telescope (right)                      | (b t) (la a d) (m d t)          |
+|  90 | 1 | Andrei looked at Danny picking-up a blue telescope      | Andrei picking-up telescope (left)                  | (b t) (la a d) (pu a t)         |
+|  90 | 2 | Andrei looked at Danny picking-up a blue telescope      | Andrei picking-up telescope (right)                 | (b t) (la a d) (pu a t)         |
+|  90 | 3 | Andrei looked at Danny picking-up a blue telescope      | Danny picking-up telescope (left)                   | (b t) (la a d) (pu d t)         |
+|  90 | 4 | Andrei looked at Danny picking-up a blue telescope      | Danny picking-up telescope (right)                  | (b t) (la a d) (pu d t)         |
+|  91 | 1 | Andrei looked at Danny putting-down a blue telescope    | Andrei putting-down telescope (left)                | (b t) (la a d) (pd a t)         |
+|  91 | 2 | Andrei looked at Danny putting-down a blue telescope    | Andrei putting-down telescope (right)               | (b t) (la a d) (pd a t)         |
+|  91 | 3 | Andrei looked at Danny putting-down a blue telescope    | Danny putting-down telescope (left)                 | (b t) (la a d) (pd d t)         |
+|  91 | 4 | Andrei looked at Danny putting-down a blue telescope    | Danny putting-down telescope (right)                | (b t) (la a d) (pd d t)         |
+|  92 | 1 | Andrei looked at Danny holding a blue telescope         | Andrei holding telescope (left)                     | (b t) (h a t) (la a d)          |
+|  92 | 2 | Andrei looked at Danny holding a blue telescope         | Andrei holding telescope (right)                    | (b t) (h a t) (la a d)          |
+|  92 | 3 | Andrei looked at Danny holding a blue telescope         | Danny holding telescope (left)                      | (b t) (h d t) (la a d)          |
+|  92 | 4 | Andrei looked at Danny holding a blue telescope         | Danny holding telescope (right)                     | (b t) (h d t) (la a d)          |
+|  93 | 1 | Andrei and Danny held the yellow bag and chair          | chair is yellow (left)                              | (y b) (y c) (h p1 b) (h p2 c)   |
+|  93 | 2 | Andrei and Danny held the yellow bag and chair          | chair is yellow (right)                             | (y b) (y c) (h p1 b) (h p2 c)   |
+|  93 | 3 | Andrei and Danny held the yellow bag and chair          | chair is not yellow (left)                          | (y b) (g c) (h p1 b) (h p2 c)   |
+|  93 | 4 | Andrei and Danny held the yellow bag and chair          | chair is not yellow (right)                         | (y b) (g c) (h p1 b) (h p2 c)   |
+|  94 | 1 | Andrei and Danny held the yellow chair and bag          | bag is yellow (left)                                | (y c) (h p1 b) (h p2 c) (y b)   |
+|  94 | 2 | Andrei and Danny held the yellow chair and bag          | bag is yellow (right)                               | (y c) (h p1 b) (h p2 c) (y b)   |
+|  94 | 3 | Andrei and Danny held the yellow chair and bag          | bag is not yellow (left)                            | (y c) (h p1 b) (h p2 c) (g b)   |
+|  94 | 4 | Andrei and Danny held the yellow chair and bag          | bag is not yellow (right)                           | (y c) (h p1 b) (h p2 c) (g b)   |
+|  95 | 1 | Andrei and Danny held the green bag and chair           | chair is green (left)                               | (g b) (h p1 b) (h p2 c) (g c)   |
+|  95 | 2 | Andrei and Danny held the green bag and chair           | chair is green (right)                              | (g b) (h p1 b) (h p2 c) (g c)   |
+|  95 | 3 | Andrei and Danny held the green bag and chair           | chair is not green (left)                           | (g b) (h p1 b) (h p2 c) (y c)   |
+|  95 | 4 | Andrei and Danny held the green bag and chair           | chair is not green (right)                          | (g b) (h p1 b) (h p2 c) (y c)   |
+|  96 | 1 | Andrei and Danny held the green chair and bag           | bag is green (left)                                 | (g c) (h p1 b) (h p2 c) (g b)   |
+|  96 | 2 | Andrei and Danny held the green chair and bag           | bag is green (right)                                | (g c) (h p1 b) (h p2 c) (g b)   |
+|  96 | 3 | Andrei and Danny held the green chair and bag           | bag is not green (left)                             | (g c) (h p1 b) (h p2 c) (y b)   |
+|  96 | 4 | Andrei and Danny held the green chair and bag           | bag is not green (right)                            | (g c) (h p1 b) (h p2 c) (y b)   |
+|  97 | 1 | Andrei and Danny moved the yellow bag and chair         | chair is yellow (left)                              | (y b) (y c) (m p1 b) (m p2 c)   |
+|  97 | 2 | Andrei and Danny moved the yellow bag and chair         | chair is yellow (right)                             | (y b) (y c) (m p1 b) (m p2 c)   |
+|  97 | 3 | Andrei and Danny moved the yellow bag and chair         | chair is not yellow (left)                          | (y b) (g c) (m p1 b) (m p2 c)   |
+|  97 | 4 | Andrei and Danny moved the yellow bag and chair         | chair is not yellow (right)                         | (y b) (g c) (m p1 b) (m p2 c)   |
+|  98 | 1 | Andrei and Danny moved the yellow chair and bag         | bag is yellow (left)                                | (y c) (y b) (m p1 b) (m p2 c)   |
+|  98 | 2 | Andrei and Danny moved the yellow chair and bag         | bag is yellow (right)                               | (y c) (y b) (m p1 b) (m p2 c)   |
+|  98 | 3 | Andrei and Danny moved the yellow chair and bag         | bag is not yellow (left)                            | (y c) (g b) (m p1 b) (m p2 c)   |
+|  98 | 4 | Andrei and Danny moved the yellow chair and bag         | bag is not yellow (right)                           | (y c) (g b) (m p1 b) (m p2 c)   |
+|  99 | 1 | Andrei and Danny moved the green bag and chair          | chair is green (left)                               | (g b) (g c) (m p1 b) (m p2 c)   |
+|  99 | 2 | Andrei and Danny moved the green bag and chair          | chair is green (right)                              | (g b) (g c) (m p1 b) (m p2 c)   |
+|  99 | 3 | Andrei and Danny moved the green bag and chair          | chair is not green (left)                           | (g b) (y c) (m p1 b) (m p2 c)   |
+|  99 | 4 | Andrei and Danny moved the green bag and chair          | chair is not green (right)                          | (g b) (y c) (m p1 b) (m p2 c)   |
+| 100 | 1 | Andrei and Danny moved the green chair and bag          | bag is green (left)                                 | (g c) (g b) (m p1 b) (m p2 c)   |
+| 100 | 2 | Andrei and Danny moved the green chair and bag          | bag is green (right)                                | (g c) (g b) (m p1 b) (m p2 c)   |
+| 100 | 3 | Andrei and Danny moved the green chair and bag          | bag is not green (left)                             | (g c) (y b) (m p1 b) (m p2 c)   |
+| 100 | 4 | Andrei and Danny moved the green chair and bag          | bag is not green (right)                            | (g c) (y b) (m p1 b) (m p2 c)   |
+| 101 | 1 | Andrei and Danny picked-up the yellow bag and chair     | chair is yellow (left)                              | (y b) (y c) (pu p1 b) (pu p2 c) |
+| 101 | 2 | Andrei and Danny picked-up the yellow bag and chair     | chair is yellow (right)                             | (y b) (y c) (pu p1 b) (pu p2 c) |
+| 101 | 3 | Andrei and Danny picked-up the yellow bag and chair     | chair is not yellow (left)                          | (y b) (g c) (pu p1 b) (pu p2 c) |
+| 101 | 4 | Andrei and Danny picked-up the yellow bag and chair     | chair is not yellow (right)                         | (y b) (g c) (pu p1 b) (pu p2 c) |
+| 102 | 1 | Andrei and Danny picked-up the yellow chair and bag     | bag is yellow (left)                                | (y c) (y b) (pu p1 b) (pu p2 c) |
+| 102 | 2 | Andrei and Danny picked-up the yellow chair and bag     | bag is yellow (right)                               | (y c) (y b) (pu p1 b) (pu p2 c) |
+| 102 | 3 | Andrei and Danny picked-up the yellow chair and bag     | bag is not yellow (left)                            | (y c) (g b) (pu p1 b) (pu p2 c) |
+| 102 | 4 | Andrei and Danny picked-up the yellow chair and bag     | bag is not yellow (right)                           | (y c) (g b) (pu p1 b) (pu p2 c) |
+| 103 | 1 | Andrei and Danny picked-up the green bag and chair      | chair is green (left)                               | (g b) (g c) (pu p1 b) (pu p2 c) |
+| 103 | 2 | Andrei and Danny picked-up the green bag and chair      | chair is green (right)                              | (g b) (g c) (pu p1 b) (pu p2 c) |
+| 103 | 3 | Andrei and Danny picked-up the green bag and chair      | chair is not green (left)                           | (g b) (y c) (pu p1 b) (pu p2 c) |
+| 103 | 4 | Andrei and Danny picked-up the green bag and chair      | chair is not green (right)                          | (g b) (y c) (pu p1 b) (pu p2 c) |
+| 104 | 1 | Andrei and Danny picked-up the green chair and bag      | bag is green (left)                                 | (g c) (g b) (pu p1 b) (pu p2 c) |
+| 104 | 2 | Andrei and Danny picked-up the green chair and bag      | bag is green (right)                                | (g c) (g b) (pu p1 b) (pu p2 c) |
+| 104 | 3 | Andrei and Danny picked-up the green chair and bag      | bag is not green (left)                             | (g c) (y b) (pu p1 b) (pu p2 c) |
+| 104 | 4 | Andrei and Danny picked-up the green chair and bag      | bag is not green (right)                            | (g c) (y b) (pu p1 b) (pu p2 c) |
+| 105 | 1 | Andrei and Danny put-down the yellow bag and chair      | chair is yellow (left)                              | (y b) (y c) (pd p1 b) (pd p2 c) |
+| 105 | 2 | Andrei and Danny put-down the yellow bag and chair      | chair is yellow (right)                             | (y b) (y c) (pd p1 b) (pd p2 c) |
+| 105 | 3 | Andrei and Danny put-down the yellow bag and chair      | chair is not yellow (left)                          | (y b) (g c) (pd p1 b) (pd p2 c) |
+| 105 | 4 | Andrei and Danny put-down the yellow bag and chair      | chair is not yellow (right)                         | (y b) (g c) (pd p1 b) (pd p2 c) |
+| 106 | 1 | Andrei and Danny put-down the yellow chair and bag      | bag is yellow (left)                                | (y c) (y b) (pd p1 b) (pd p2 c) |
+| 106 | 2 | Andrei and Danny put-down the yellow chair and bag      | bag is yellow (right)                               | (y c) (y b) (pd p1 b) (pd p2 c) |
+| 106 | 3 | Andrei and Danny put-down the yellow chair and bag      | bag is not yellow (left)                            | (y c) (g b) (pd p1 b) (pd p2 c) |
+| 106 | 4 | Andrei and Danny put-down the yellow chair and bag      | bag is not yellow (right)                           | (y c) (g b) (pd p1 b) (pd p2 c) |
+| 107 | 1 | Andrei and Danny put-down the green bag and chair       | chair is green (left)                               | (g b) (g c) (pd p1 b) (pd p2 c) |
+| 107 | 2 | Andrei and Danny put-down the green bag and chair       | chair is green (right)                              | (g b) (g c) (pd p1 b) (pd p2 c) |
+| 107 | 3 | Andrei and Danny put-down the green bag and chair       | chair is not green (left)                           | (g b) (y c) (pd p1 b) (pd p2 c) |
+| 107 | 4 | Andrei and Danny put-down the green bag and chair       | chair is not green (right)                          | (g b) (y c) (pd p1 b) (pd p2 c) |
+| 108 | 1 | Andrei and Danny put-down the green chair and bag       | bag is green (left)                                 | (g c) (g b) (pd p1 b) (pd p2 c) |
+| 108 | 2 | Andrei and Danny put-down the green chair and bag       | bag is green (right)                                | (g c) (g b) (pd p1 b) (pd p2 c) |
+| 108 | 3 | Andrei and Danny put-down the green chair and bag       | bag is not green (left)                             | (g c) (y b) (pd p1 b) (pd p2 c) |
+| 108 | 4 | Andrei and Danny put-down the green chair and bag       | bag is not green (right)                            | (g c) (y b) (pd p1 b) (pd p2 c) |
+| 109 | 1 | Danny held the telescope or the chair and the bag       | held telescope (left)                               | (h d t)                         |
+| 109 | 3 | Danny held the telescope or the chair and the bag       | held chair and bag (left)                           | (h d c) (h d b)                 |
+| 109 | 5 | Danny held the telescope or the chair and the bag       | held telescope and bag (left)                       | (h d t) (h d b)                 |
+| 110 | 1 | Danny held the bag or the chair and the telescope       | held bag (left)                                     | (h d b)                         |
+| 110 | 3 | Danny held the bag or the chair and the telescope       | held chair and telescope (left)                     | (h d c) (h d t)                 |
+| 110 | 5 | Danny held the bag or the chair and the telescope       | held bag and telescope (left)                       | (h d b) (h b t)                 |
+| 111 | 1 | Danny held the chair or the telescope and the bag       | held chair (left)                                   | (h d c)                         |
+| 111 | 3 | Danny held the chair or the telescope and the bag       | held telescope and bag (left)                       | (h d t) (h d b)                 |
+| 111 | 5 | Danny held the chair or the telescope and the bag       | held chair and bag (left)                           | (h d b) (h d c)                 |
+| 112 | 1 | Danny held the chair or the bag and the telescope       | held chair (left)                                   | (h d c)                         |
+| 112 | 3 | Danny held the chair or the bag and the telescope       | held bag and telescope (left)                       | (h d b) (h d t)                 |
+| 112 | 5 | Danny held the chair or the bag and the telescope       | held chair and telescope (left)                     | (h d c) (h d t)                 |
+| 113 | 1 | Danny moved the telescope or the chair and the bag      | moved telescope (left)                              | (m d t)                         |
+| 113 | 3 | Danny moved the telescope or the chair and the bag      | moved chair and bag (left)                          | (m d c) (m d b)                 |
+| 113 | 5 | Danny moved the telescope or the chair and the bag      | moved telescope and bag (left)                      | (m d t) (m d b)                 |
+| 114 | 1 | Danny moved the bag or the chair and the telescope      | moved bag (left)                                    | (m d b)                         |
+| 114 | 3 | Danny moved the bag or the chair and the telescope      | moved chair and telescope (left)                    | (m d c) (m d t)                 |
+| 114 | 5 | Danny moved the bag or the chair and the telescope      | moved bag and telescope (left)                      | (m d b) (m b t)                 |
+| 115 | 1 | Danny moved the chair or the telescope and the bag      | moved chair (left)                                  | (m d c)                         |
+| 115 | 3 | Danny moved the chair or the telescope and the bag      | moved telescope and bag (left)                      | (m d t) (m d b)                 |
+| 115 | 5 | Danny moved the chair or the telescope and the bag      | moved chair and bag (left)                          | (m d b) (m d c)                 |
+| 116 | 1 | Danny moved the chair or the bag and the telescope      | moved chair (left)                                  | (m d c)                         |
+| 116 | 3 | Danny moved the chair or the bag and the telescope      | moved bag and telescope (left)                      | (m d b) (m d t)                 |
+| 116 | 5 | Danny moved the chair or the bag and the telescope      | moved chair and telescope (left)                    | (m d c) (m d t)                 |
+| 117 | 1 | Danny picked-up the telescope or the chair and the bag  | picked-up telescope (left)                          | (pu d t)                        |
+| 117 | 3 | Danny picked-up the telescope or the chair and the bag  | picked-up chair and bag (left)                      | (pu d c) (pu d b)               |
+| 117 | 5 | Danny picked-up the telescope or the chair and the bag  | picked-up telescope and bag (left)                  | (pu d t) (pu d b)               |
+| 118 | 1 | Danny picked-up the bag or the chair and the telescope  | picked-up bag (left)                                | (pu d b)                        |
+| 118 | 3 | Danny picked-up the bag or the chair and the telescope  | picked-up chair and telescope (left)                | (pu d c) (pu d t)               |
+| 118 | 5 | Danny picked-up the bag or the chair and the telescope  | picked-up bag and telescope (left)                  | (pu d b) (pu b t)               |
+| 119 | 1 | Danny picked-up the chair or the telescope and the bag  | picked-up chair (left)                              | (pu d c)                        |
+| 119 | 3 | Danny picked-up the chair or the telescope and the bag  | picked-up telescope and bag (left)                  | (pu d t) (pu d b)               |
+| 119 | 5 | Danny picked-up the chair or the telescope and the bag  | picked-up chair and bag (left)                      | (pu d b) (pu d c)               |
+| 120 | 1 | Danny picked-up the chair or the bag and the telescope  | picked-up chair (left)                              | (pu d c)                        |
+| 120 | 3 | Danny picked-up the chair or the bag and the telescope  | picked-up bag and telescope (left)                  | (pu d b) (pu d t)               |
+| 120 | 5 | Danny picked-up the chair or the bag and the telescope  | picked-up chair and telescope (left)                | (pu d c) (pu d t)               |
+| 121 | 1 | Andrei held the telescope or the chair and the bag      | held telescope (left)                               | (h a t)                         |
+| 121 | 3 | Andrei held the telescope or the chair and the bag      | held chair and bag (left)                           | (h a c) (h a b)                 |
+| 121 | 5 | Andrei held the telescope or the chair and the bag      | held telescope and bag (left)                       | (h a t) (h a b)                 |
+| 122 | 1 | Andrei held the bag or the chair and the telescope      | held bag (left)                                     | (h a b)                         |
+| 122 | 3 | Andrei held the bag or the chair and the telescope      | held chair and telescope (left)                     | (h a c) (h a t)                 |
+| 122 | 5 | Andrei held the bag or the chair and the telescope      | held bag and telescope (left)                       | (h a b) (h b t)                |
+| 123 | 1 | Andrei held the chair or the telescope and the bag      | held chair (left)                                   | (h a c)                         |
+| 123 | 3 | Andrei held the chair or the telescope and the bag      | held telescope and bag (left)                       | (h a t) (h a b)                 |
+| 123 | 5 | Andrei held the chair or the telescope and the bag      | held chair and bag (left)                           | (h a b) (h a c)                 |
+| 124 | 1 | Andrei held the chair or the bag and the telescope      | held chair (left)                                   | (h a c)                         |
+| 124 | 3 | Andrei held the chair or the bag and the telescope      | held bag and telescope (left)                       | (h a b) (h a t)                 |
+| 124 | 5 | Andrei held the chair or the bag and the telescope      | held chair and telescope (left)                     | (h a c) (h a t)                 |
+| 125 | 1 | Andrei moved the telescope or the chair and the bag     | moved telescope (left)                              | (m a t)                         |
+| 125 | 3 | Andrei moved the telescope or the chair and the bag     | moved chair and bag (left)                          | (m a c) (m a b)                 |
+| 125 | 5 | Andrei moved the telescope or the chair and the bag     | moved telescope and bag (left)                      | (m a t) (m a b)                 |
+| 126 | 1 | Andrei moved the bag or the chair and the telescope     | moved bag (left)                                    | (m a b)                         |
+| 126 | 3 | Andrei moved the bag or the chair and the telescope     | moved chair and telescope (left)                    | (m a c) (m a t)                 |
+| 126 | 5 | Andrei moved the bag or the chair and the telescope     | moved bag and telescope (left)                      | (m a b) (m a t)                |
+| 127 | 1 | Andrei moved the chair or the telescope and the bag     | moved chair (left)                                  | (m a c)                         |
+| 127 | 3 | Andrei moved the chair or the telescope and the bag     | moved telescope and bag (left)                      | (m a t) (m a b)                 |
+| 127 | 5 | Andrei moved the chair or the telescope and the bag     | moved chair and bag (left)                          | (m a b) (m a c)                 |
+| 128 | 1 | Andrei moved the chair or the bag and the telescope     | moved chair (left)                                  | (m a c)                         |
+| 128 | 3 | Andrei moved the chair or the bag and the telescope     | moved bag and telescope (left)                      | (m a b) (m a t)                 |
+| 128 | 5 | Andrei moved the chair or the bag and the telescope     | moved chair and telescope (left)                    | (m a c) (m a t)                 |
+| 129 | 1 | Andrei picked-up the telescope or the chair and the bag | picked-up telescope (left)                          | (pu a t)                        |
+| 129 | 3 | Andrei picked-up the telescope or the chair and the bag | picked-up chair and bag (left)                      | (pu a c) (pu a b)               |
+| 129 | 5 | Andrei picked-up the telescope or the chair and the bag | picked-up telescope and bag (left)                  | (pu a t) (pu a b)               |
+| 130 | 1 | Andrei picked-up the bag or the chair and the telescope | picked-up bag (left)                                | (pu a b)                        |
+| 130 | 3 | Andrei picked-up the bag or the chair and the telescope | picked-up chair and telescope (left)                | (pu a c) (pu a t)               |
+| 130 | 5 | Andrei picked-up the bag or the chair and the telescope | picked-up bag and telescope (left)                  | (pu a b) (pu b t)               |
+| 131 | 1 | Andrei picked-up the chair or the telescope and the bag | picked-up chair (left)                              | (pu a c)                        |
+| 131 | 3 | Andrei picked-up the chair or the telescope and the bag | picked-up telescope and bag (left)                  | (pu a t) (pu a b)               |
+| 131 | 5 | Andrei picked-up the chair or the telescope and the bag | picked-up chair and bag (left)                      | (pu a b) (pu a c)               |
+| 132 | 1 | Andrei picked-up the chair or the bag and the telescope | picked-up chair (left)                              | (pu a c)                        |
+| 132 | 3 | Andrei picked-up the chair or the bag and the telescope | picked-up bag and telescope (left)                  | (pu a b) (pu a t)               |
+| 132 | 5 | Andrei picked-up the chair or the bag and the telescope | picked-up chair and telescope (left)                | (pu a c) (pu a t)               |
+| 133 | 1 | Danny looked at Andrei with a telescope                 | Danny with a telescope (left)                       | (la d a) (h d t)                |
+| 133 | 2 | Danny looked at Andrei with a telescope                 | Danny with a telescope (right)                      | (la d a) (h d t)                |
+| 133 | 3 | Danny looked at Andrei with a telescope                 | Andrei with a telescope (left)                      | (la d a) (h a t)                |
+| 133 | 4 | Danny looked at Andrei with a telescope                 | Andrei with a telescope (right)                     | (la d a) (h a t)                |
+| 134 | 1 | Andrei looked at Danny with a telescope                 | Andrei with a telescope (left)                      | (la a d) (h a t)                |
+| 134 | 2 | Andrei looked at Danny with a telescope                 | Andrei with a telescope (right)                     | (la a d) (h a t)                |
+| 134 | 3 | Andrei looked at Danny with a telescope                 | Danny with a telescope (left)                       | (la a d) (h d t)                |
+| 134 | 4 | Andrei looked at Danny with a telescope                 | Danny with a telescope (right)                      | (la a d) (h d t)                |
+| 135 | 1 | Danny looked at the yellow bag with a telescope         | Danny with a telescope (left)                       | (y b) (h d t) (la d b)          |
+| 135 | 2 | Danny looked at the yellow bag with a telescope         | Danny with a telescope (right)                      | (y b) (h d t) (la d b)          |
+| 135 | 3 | Danny looked at the yellow bag with a telescope         | bag with a telescope (left)                         | (y b) (la d b) (h b t)          |
+| 135 | 4 | Danny looked at the yellow bag with a telescope         | bag with a telescope (right)                        | (y b) (la d b) (h b t)          |
+| 136 | 1 | Danny looked at the yellow chair with a telescope       | Danny with a telescope (left)                       | (y c) (h d t) (la d c)          |
+| 136 | 2 | Danny looked at the yellow chair with a telescope       | Danny with a telescope (right)                      | (y c) (h d t) (la d c)          |
+| 136 | 3 | Danny looked at the yellow chair with a telescope       | chair with a telescope (left)                       | (y c) (la d c) (h c t)          |
+| 136 | 4 | Danny looked at the yellow chair with a telescope       | chair with a telescope (right)                      | (y c) (la d c) (h c t)          |
+| 137 | 1 | Danny looked at the green bag with a telescope          | Danny with a telescope (left)                       | (g b) (h d t) (la d b)          |
+| 137 | 2 | Danny looked at the green bag with a telescope          | Danny with a telescope (right)                      | (g b) (h d t) (la d b)          |
+| 137 | 3 | Danny looked at the green bag with a telescope          | bag with a telescope (left)                         | (g b) (la d b) (h b t)          |
+| 137 | 4 | Danny looked at the green bag with a telescope          | bag with a telescope (right)                        | (g b) (la d b) (h b t)          |
+| 138 | 1 | Danny looked at the green chair with a telescope        | Danny with a telescope (left)                       | (g c) (h d t) (la d c)          |
+| 138 | 2 | Danny looked at the green chair with a telescope        | Danny with a telescope (right)                      | (g c) (h d t) (la d c)          |
+| 138 | 3 | Danny looked at the green chair with a telescope        | chair with a telescope (left)                       | (g c) (la d c) (h c t)          |
+| 138 | 4 | Danny looked at the green chair with a telescope        | chair with a telescope (right)                      | (g c) (la d c) (h c t)          |
+| 139 | 1 | Andrei looked at the yellow bag with a telescope        | Andrei with a telescope (left)                      | (y b) (h a t) (la a b)          |
+| 139 | 2 | Andrei looked at the yellow bag with a telescope        | Andrei with a telescope (right)                     | (y b) (h a t) (la a b)          |
+| 139 | 3 | Andrei looked at the yellow bag with a telescope        | bag with a telescope (left)                         | (y b) (h b t) (la a b)          |
+| 139 | 4 | Andrei looked at the yellow bag with a telescope        | bag with a telescope (right)                        | (y b) (h b t) (la a b)          |
+| 140 | 1 | Andrei looked at the yellow chair with a telescope      | Andrei with a telescope (left)                      | (y c) (h a t) (la a c)          |
+| 140 | 2 | Andrei looked at the yellow chair with a telescope      | Andrei with a telescope (right)                     | (y c) (h a t) (la a c)          |
+| 140 | 3 | Andrei looked at the yellow chair with a telescope      | chair with a telescope (left)                       | (y c) (h c t) (la a c)          |
+| 140 | 4 | Andrei looked at the yellow chair with a telescope      | chair with a telescope (right)                      | (y c) (h c t) (la a c)          |
+| 141 | 1 | Andrei looked at the green bag with a telescope         | Andrei with a telescope (left)                      | (g b) (h a t) (la a b)          |
+| 141 | 2 | Andrei looked at the green bag with a telescope         | Andrei with a telescope (right)                     | (g b) (h a t) (la a b)          |
+| 141 | 3 | Andrei looked at the green bag with a telescope         | bag with a telescope (left)                         | (g b) (h b t) (la a b)          |
+| 141 | 4 | Andrei looked at the green bag with a telescope         | bag with a telescope (right)                        | (g b) (h b t) (la a b)          |
+| 142 | 1 | Andrei looked at the green chair with a telescope       | Andrei with a telescope (left)                      | (g c) (h a t) (la a c)          |
+| 142 | 2 | Andrei looked at the green chair with a telescope       | Andrei with a telescope (right)                     | (g c) (h a t) (la a c)          |
+| 142 | 3 | Andrei looked at the green chair with a telescope       | chair with a telescope (left)                       | (g c) (h c t) (la a c)          |
+| 142 | 4 | Andrei looked at the green chair with a telescope       | chair with a telescope (right)                      | (g c) (h c t) (la a c)          |
+| 143 | 1 | Danny moved the telescope on the bag                    | telescope on bag before movement (left)             | (pu d t)                        |
+| 143 | 2 | Danny moved the telescope on the bag                    | telescope on bag before movement (right)            | (pu d t)                        |
+| 143 | 3 | Danny moved the telescope on the bag                    | telescope on bag after moved (left)                 | (pd d t)                        |
+| 143 | 4 | Danny moved the telescope on the bag                    | telescope on bag after moved (right)                | (pd d t)                        |
+| 144 | 1 | Danny moved the telescope on the chair                  | telescope on chair before movement (left)           | (pu d t)                        |
+| 144 | 2 | Danny moved the telescope on the chair                  | telescope on chair before movement (right)          | (pu d t)                        |
+| 144 | 3 | Danny moved the telescope on the chair                  | telescope on chair after moved (left)               | (pd d t)                        |
+| 144 | 4 | Danny moved the telescope on the chair                  | telescope on chair after moved (right)              | (pd d t)                        |
+| 149 | 1 | Danny moved the bag on the chair                        | bag on chair before movement (left)                 | (pu d b)                        |
+| 149 | 2 | Danny moved the bag on the chair                        | bag on chair before movement (right)                | (pu d b)                        |
+| 149 | 3 | Danny moved the bag on the chair                        | bag on chair after moved (left)                     | (pd d b)                        |
+| 149 | 4 | Danny moved the bag on the chair                        | bag on chair after moved (right)                    | (pd d b)                        |
+| 152 | 1 | Andrei moved the telescope on the bag                   | telescope on bag before movement (left)             | (pu a t)                        |
+| 152 | 2 | Andrei moved the telescope on the bag                   | telescope on bag before movement (right)            | (pu a t)                        |
+| 152 | 3 | Andrei moved the telescope on the bag                   | telescope on bag after moved (left)                 | (pd a t)                        |
+| 152 | 4 | Andrei moved the telescope on the bag                   | telescope on bag after moved (right)                | (pd a t)                        |
+| 153 | 1 | Andrei moved the telescope on the chair                 | telescope on chair before movement (left)           | (pu a t)                        |
+| 153 | 2 | Andrei moved the telescope on the chair                 | telescope on chair before movement (right)          | (pu a t)                        |
+| 153 | 3 | Andrei moved the telescope on the chair                 | telescope on chair after moved (left)               | (pd a t)                        |
+| 153 | 4 | Andrei moved the telescope on the chair                 | telescope on chair after moved (right)              | (pd a t)                        |
+| 158 | 1 | Andrei moved the bag on the chair                       | bag on chair before movement (left)                 | (pu a b)                        |
+| 158 | 2 | Andrei moved the bag on the chair                       | bag on chair before movement (right)                | (pu a b)                        |
+| 158 | 3 | Andrei moved the bag on the chair                       | bag on chair after moved (left)                     | (pd a b)                        |
+| 158 | 4 | Andrei moved the bag on the chair                       | bag on chair after moved (right)                    | (pd a b)                        |
+| 161 | 1 | Andrei and Danny held a yellow bag                      | same bag                                            | (y b) (h a b) (h d b)           |
+| 161 | 2 | Andrei and Danny held a yellow bag                      | different bag                                       | (y b) (h a b) (h d b1)          |
+| 162 | 1 | Andrei and Danny held a yellow chair                    | same chair                                          | (y c) (h a c) (h d c)           |
+| 162 | 2 | Andrei and Danny held a yellow chair                    | different chair                                     | (y c) (h a c) (h d c1)          |
+| 163 | 1 | Andrei and Danny held a green bag                       | same bag                                            | (g b) (h a b) (h d b)           |
+| 163 | 2 | Andrei and Danny held a green bag                       | different bag                                       | (g b) (h a b) (h d b1)          |
+| 164 | 1 | Andrei and Danny held a green chair                     | same chair                                          | (g c) (h a c) (h d c)           |
+| 164 | 2 | Andrei and Danny held a green chair                     | different chair                                     | (g c) (h a c) (h d c1)          |
+| 165 | 1 | Andrei and Danny moved a yellow bag                     | same bag                                            | (y b) (m a b) (m d b)           |
+| 165 | 2 | Andrei and Danny moved a yellow bag                     | different bag                                       | (y b) (m a b) (m d b1)          |
+| 166 | 1 | Andrei and Danny moved a yellow chair                   | same chair                                          | (y c) (m a c) (m d c)           |
+| 166 | 2 | Andrei and Danny moved a yellow chair                   | different chair                                     | (y c) (m a c) (m d c1)          |
+| 167 | 1 | Andrei and Danny moved a green bag                      | same bag                                            | (g b) (m a b) (m d b)           |
+| 167 | 2 | Andrei and Danny moved a green bag                      | different bag                                       | (g b) (m a b) (m d b1)          |
+| 168 | 1 | Andrei and Danny moved a green chair                    | same chair                                          | (g c) (m a c) (m d c)           |
+| 168 | 2 | Andrei and Danny moved a green chair                    | different chair                                     | (g c) (m a c) (m d c1)          |
+| 169 | 1 | Andrei and Danny picked-up a yellow bag                 | same bag                                            | (y b) (pu a b) (pu d b)         |
+| 169 | 2 | Andrei and Danny picked-up a yellow bag                 | different bag                                       | (y b) (pu a b) (pu d b1)        |
+| 170 | 1 | Andrei and Danny picked-up a yellow chair               | same chair                                          | (y c) (pu a c) (pu d c)         |
+| 170 | 2 | Andrei and Danny picked-up a yellow chair               | different chair                                     | (y c) (pu a c) (pu d c1)        |
+| 171 | 1 | Andrei and Danny picked-up a green bag                  | same bag                                            | (g b) (pu a b) (pu d b)         |
+| 171 | 2 | Andrei and Danny picked-up a green bag                  | different bag                                       | (g b) (pu a b) (pu d b1)        |
+| 172 | 1 | Andrei and Danny picked-up a green chair                | same chair                                          | (g c) (pu a c) (pu d c)         |
+| 172 | 2 | Andrei and Danny picked-up a green chair                | different chair                                     | (g c) (pu a c) (pu d c1)        |
+| 173 | 1 | Andrei and Danny put-down a yellow bag                  | same bag                                            | (y b) (pd a b) (pd d b)         |
+| 173 | 2 | Andrei and Danny put-down a yellow bag                  | different bag                                       | (y b) (pd a b) (pd d b1)        |
+| 174 | 1 | Andrei and Danny put-down a yellow chair                | same chair                                          | (y c) (pd a c) (pd d c)         |
+| 174 | 2 | Andrei and Danny put-down a yellow chair                | different chair                                     | (y c) (pd a c) (pd d c1)        |
+| 175 | 1 | Andrei and Danny put-down a green bag                   | same bag                                            | (g b) (pd a b) (pd d b)         |
+| 175 | 2 | Andrei and Danny put-down a green bag                   | different bag                                       | (g b) (pd a b) (pd d b1)        |
+| 176 | 1 | Andrei and Danny put-down a green chair                 | same chair                                          | (g c) (pd a c) (pd d c)         |
+| 176 | 2 | Andrei and Danny put-down a green chair                 | different chair                                     | (g c) (pd a c) (pd d c1)        |
+| 177 | 1 | Andrei and Danny approached a yellow bag                | same bag (left)                                     | (y b) (a a b) (a d b)           |
+| 177 | 2 | Andrei and Danny approached a yellow bag                | same bag (right)                                    | (y b) (a a b) (a d b)           |
+| 177 | 3 | Andrei and Danny approached a yellow bag                | different bag (left)                                | (y b) (a a b) (a d b1)          |
+| 177 | 4 | Andrei and Danny approached a yellow bag                | different bag (right)                               | (y b) (a a b) (a d b1)          |
+| 178 | 1 | Andrei and Danny approached a yellow chair              | same chair (left)                                   | (y c) (a a c) (a d c)           |
+| 178 | 2 | Andrei and Danny approached a yellow chair              | same chair (right)                                  | (y c) (a a c) (a d c)           |
+| 178 | 3 | Andrei and Danny approached a yellow chair              | different chair (left)                              | (y c) (a a c) (a d c1)          |
+| 178 | 4 | Andrei and Danny approached a yellow chair              | different chair (right)                             | (y c) (a a c) (a d c1)          |
+| 179 | 1 | Andrei and Danny approached a green bag                 | same bag (left)                                     | (g b) (a a b) (a d b)           |
+| 179 | 2 | Andrei and Danny approached a green bag                 | same bag (right)                                    | (g b) (a a b) (a d b)           |
+| 179 | 3 | Andrei and Danny approached a green bag                 | different bag (left)                                | (g b) (a a b) (a d b1)          |
+| 179 | 4 | Andrei and Danny approached a green bag                 | different bag (right)                               | (g b) (a a b) (a d b1)          |
+| 180 | 1 | Andrei and Danny approached a green chair               | same chair (left)                                   | (g c) (a a c) (a d c)           |
+| 180 | 2 | Andrei and Danny approached a green chair               | same chair (right)                                  | (g c) (a a c) (a d c)           |
+| 180 | 3 | Andrei and Danny approached a green chair               | different chair (left)                              | (g c) (a a c) (a d c1)          |
+| 180 | 4 | Andrei and Danny approached a green chair               | different chair (right)                             | (g c) (a a c) (a d c1)          |
+| 181 | 1 | Andrei and Danny left a yellow bag                      | same bag (left)                                     | (y b) (l a b) (l d b)           |
+| 181 | 2 | Andrei and Danny left a yellow bag                      | same bag (right)                                    | (y b) (l a b) (l d b)           |
+| 181 | 3 | Andrei and Danny left a yellow bag                      | different bag (left)                                | (y b) (l a b) (l d b1)          |
+| 181 | 4 | Andrei and Danny left a yellow bag                      | different bag (right)                               | (y b) (l a b) (l d b1)          |
+| 182 | 1 | Andrei and Danny left a yellow chair                    | same chair (left)                                   | (y c) (l a c) (l d c)           |
+| 182 | 2 | Andrei and Danny left a yellow chair                    | same chair (right)                                  | (y c) (l a c) (l d c)           |
+| 182 | 3 | Andrei and Danny left a yellow chair                    | different chair (left)                              | (y c) (l a c) (l d c1)          |
+| 182 | 4 | Andrei and Danny left a yellow chair                    | different chair (right)                             | (y c) (l a c) (l d c1)          |
+| 183 | 1 | Andrei and Danny left a green bag                       | same bag (left)                                     | (g b) (l a b) (l d b)           |
+| 183 | 2 | Andrei and Danny left a green bag                       | same bag (right)                                    | (g b) (l a b) (l d b)           |
+| 183 | 3 | Andrei and Danny left a green bag                       | different bag (left)                                | (g b) (l a b) (l d b1)          |
+| 183 | 4 | Andrei and Danny left a green bag                       | different bag (right)                               | (g b) (l a b) (l d b1)          |
+| 184 | 1 | Andrei and Danny left a green chair                     | same chair (left)                                   | (g c) (l a c) (l d c)           |
+| 184 | 2 | Andrei and Danny left a green chair                     | same chair (right)                                  | (g c) (l a c) (l d c)           |
+| 184 | 3 | Andrei and Danny left a green chair                     | different chair (left)                              | (g c) (l a c) (l d c1)          |
+| 184 | 4 | Andrei and Danny left a green chair                     | different chair (right)                             | (g c) (l a c) (l d c1)          |
+| 185 | 1 | Someone held the bags                                   | same person held both bags (left)                   | (h p1 b1) (h p1 b2)             |
+| 185 | 2 | Someone held the bags                                   | same person held both bags (right)                  | (h p1 b1) (h p1 b2)             |
+| 185 | 3 | Someone held the bags                                   | two people each held different object (left)        | (h p1 b1) (h p2 b2)             |
+| 185 | 4 | Someone held the bags                                   | two people each held different object (right)       | (h p1 b1) (h p2 b2)             |
+| 187 | 1 | Someone moved the bags                                  | same person moved both bags (left)                  | (m p1 b1) (m p1 b2)             |
+| 187 | 2 | Someone moved the bags                                  | same person moved both bags (right)                 | (m p1 b1) (m p1 b2)             |
+| 187 | 3 | Someone moved the bags                                  | two people each moved different object (left)       | (m p1 b1) (m p2 b2)             |
+| 187 | 4 | Someone moved the bags                                  | two people each moved different object (right)      | (m p1 b1) (m p2 b2)             |
+| 188 | 1 | Someone moved the chairs                                | same person moved both chairs (left)                | (m p1 c1) (m p1 c2)             |
+| 188 | 2 | Someone moved the chairs                                | same person moved both chairs (right)               | (m p1 c1) (m p1 c2)             |
+| 188 | 3 | Someone moved the chairs                                | two people each moved different object (left)       | (m p1 c1) (m p2 c2)             |
+| 188 | 4 | Someone moved the chairs                                | two people each moved different object (right)      | (m p1 c1) (m p2 c2)             |
+| 189 | 1 | Someone picked-up the bags                              | same person picked-up both bags (left)              | (pu p1 b1) (pu p1 b2)           |
+| 189 | 2 | Someone picked-up the bags                              | same person picked-up both bags (right)             | (pu p1 b1) (pu p1 b2)           |
+| 189 | 3 | Someone picked-up the bags                              | two people each picked-up different object (left)   | (pu p1 b1) (pu p2 b2)           |
+| 189 | 4 | Someone picked-up the bags                              | two people each picked-up different object (right)  | (pu p1 b1) (pu p2 b2)           |
+| 190 | 1 | Someone picked-up the chairs                            | same person picked-up both chairs (left)            | (pu p1 c1) (pu p1 c2)           |
+| 190 | 2 | Someone picked-up the chairs                            | same person picked-up both chairs (right)           | (pu p1 c1) (pu p1 c2)           |
+| 190 | 3 | Someone picked-up the chairs                            | two people each picked-up different object (left)   | (pu p1 c1) (pu p2 c2)           |
+| 190 | 4 | Someone picked-up the chairs                            | two people each picked-up different object (right)  | (pu p1 c1) (pu p2 c2)           |
+| 191 | 1 | Someone put-down the bags                               | same person put-down both bags (left)               | (pd p1 b1) (pd p1 b2)           |
+| 191 | 2 | Someone put-down the bags                               | same person put-down both bags (right)              | (pd p1 b1) (pd p1 b2)           |
+| 191 | 3 | Someone put-down the bags                               | two people each put-down different object (left)    | (pd p1 b1) (pd p2 b2)           |
+| 191 | 4 | Someone put-down the bags                               | two people each put-down different object (right)   | (pd p1 b1) (pd p2 b2)           |
+| 192 | 1 | Someone put-down the chairs                             | same person put-down both chairs (left)             | (pd p1 c1) (pd p1 c2)           |
+| 192 | 2 | Someone put-down the chairs                             | same person put-down both chairs (right)            | (pd p1 c1) (pd p1 c2)           |
+| 192 | 3 | Someone put-down the chairs                             | two people each put-down different object (left)    | (pd p1 c1) (pd p2 c2)           |
+| 192 | 4 | Someone put-down the chairs                             | two people each put-down different object (right)   | (pd p1 c1) (pd p2 c2)           |
+| 193 | 1 | Someone approached the bags                             | same person approached both bags (left)             | (a p1 b1) (a p1 b2)             |
+| 193 | 2 | Someone approached the bags                             | same person approached both bags (right)            | (a p1 b1) (a p1 b2)             |
+| 193 | 3 | Someone approached the bags                             | two people each approached different object (left)  | (a p1 b1) (a p2 b2)             |
+| 193 | 4 | Someone approached the bags                             | two people each approached different object (right) | (a p1 b1) (a p2 b2)             |
+| 194 | 1 | Someone approached the chairs                           | same person approached both chairs (left)           | (a p1 c1) (a p1 c2)             |
+| 194 | 2 | Someone approached the chairs                           | same person approached both chairs (right)          | (a p1 c1) (a p1 c2)             |
+| 194 | 3 | Someone approached the chairs                           | two people each approached different object (left)  | (a p1 c1) (a p2 c2)             |
+| 194 | 4 | Someone approached the chairs                           | two people each approached different object (right) | (a p1 c1) (a p2 c2)             |
+| 195 | 1 | Someone left the bags                                   | same person left both bags (left)                   | (l p1 b1) (l p1 b2)             |
+| 195 | 2 | Someone left the bags                                   | same person left both bags (right)                  | (l p1 b1) (l p1 b2)             |
+| 195 | 3 | Someone left the bags                                   | two people each left different object (left)        | (l p1 b1) (l p2 b2)             |
+| 195 | 4 | Someone left the bags                                   | two people each left different object (right)       | (l p1 b1) (l p2 b2)             |
+| 196 | 1 | Someone left the chairs                                 | same person left both chairs (left)                 | (l p1 c1) (l p1 c2)             |
+| 196 | 2 | Someone left the chairs                                 | same person left both chairs (right)                | (l p1 c1) (l p1 c2)             |
+| 196 | 3 | Someone left the chairs                                 | two people each left different object (left)        | (l p1 c1) (l p2 c2)             |
+| 196 | 4 | Someone left the chairs                                 | two people each left different object (right)       | (l p1 c1) (l p2 c2)             |
+| 197 | 1 | Danny held the bag and the chair; it is yellow          | bag is yellow (left)                                | (y b) (h d b) (h d c) (g c)     |
+| 197 | 3 | Danny held the bag and the chair; it is yellow          | chair is yellow (left)                              | (y c) (h d b) (h d c) (g b)     |
+| 198 | 1 | Danny held the bag and the chair; it is green           | bag is green (left)                                 | (g b) (h d b) (h d c) (y c)     |
+| 198 | 3 | Danny held the bag and the chair; it is green           | chair is green (left)                               | (g c) (h d b) (h d c) (y b)     |
+| 199 | 1 | Danny moved the bag and the chair; it is yellow         | bag is yellow (left)                                | (y b) (m d b) (m d c) (g c)     |
+| 199 | 3 | Danny moved the bag and the chair; it is yellow         | chair is yellow (left)                              | (y c) (m d b) (m d c) (g b)     |
+| 200 | 1 | Danny moved the bag and the chair; it is green          | bag is green (left)                                 | (g b) (m d b) (m d c) (y c)     |
+| 200 | 3 | Danny moved the bag and the chair; it is green          | chair is green (left)                               | (g c) (m d b) (m d c) (y b)     |
+| 201 | 1 | Danny picked-up the bag and the chair; it is yellow     | bag is yellow (left)                                | (y b) (pu d b) (pu d c) (g c)   |
+| 201 | 3 | Danny picked-up the bag and the chair; it is yellow     | chair is yellow (left)                              | (y c) (pu d b) (pu d c) (g b)   |
+| 202 | 1 | Danny picked-up the bag and the chair; it is green      | bag is green (left)                                 | (g b) (pu d b) (pu d c) (y c)   |
+| 202 | 3 | Danny picked-up the bag and the chair; it is green      | chair is green (left)                               | (g c) (pu d b) (pu d c) (y b)   |
+| 203 | 1 | Danny put-down the bag and the chair; it is yellow      | bag is yellow (left)                                | (y b) (pd d b) (pd d c) (g c)   |
+| 203 | 3 | Danny put-down the bag and the chair; it is yellow      | chair is yellow (left)                              | (y c) (pd d b) (pd d c) (g b)   |
+| 204 | 1 | Danny put-down the bag and the chair; it is green       | bag is green (left)                                 | (g b) (pd d b) (pd d c) (y c)   |
+| 204 | 3 | Danny put-down the bag and the chair; it is green       | chair is green (left)                               | (g c) (pd d b) (pd d c) (y b)   |
+| 205 | 1 | Danny approached the bag and the chair; it is yellow    | bag is yellow (left)                                | (y b) (a d b) (a d c) (g c)     |
+| 205 | 2 | Danny approached the bag and the chair; it is yellow    | bag is yellow (right)                               | (y b) (a d b) (a d c) (g c)     |
+| 205 | 3 | Danny approached the bag and the chair; it is yellow    | chair is yellow (left)                              | (y c) (a d b) (a d c) (g b)     |
+| 205 | 4 | Danny approached the bag and the chair; it is yellow    | chair is yellow (right)                             | (y c) (a d b) (a d c) (g b)     |
+| 206 | 1 | Danny approached the bag and the chair; it is green     | bag is green (left)                                 | (g b) (a d b) (a d c) (y c)     |
+| 206 | 2 | Danny approached the bag and the chair; it is green     | bag is green (right)                                | (g b) (a d b) (a d c) (y c)     |
+| 206 | 3 | Danny approached the bag and the chair; it is green     | chair is green (left)                               | (g c) (a d b) (a d c) (y b)     |
+| 206 | 4 | Danny approached the bag and the chair; it is green     | chair is green (right)                              | (g c) (a d b) (a d c) (y b)     |
+| 207 | 1 | Danny left the bag and the chair; it is yellow          | bag is yellow (left)                                | (y b) (l d b) (l d c) (g c)     |
+| 207 | 2 | Danny left the bag and the chair; it is yellow          | bag is yellow (right)                               | (y b) (l d b) (l d c) (g c)     |
+| 207 | 3 | Danny left the bag and the chair; it is yellow          | chair is yellow (left)                              | (y c) (l d b) (l d c) (g b)     |
+| 207 | 4 | Danny left the bag and the chair; it is yellow          | chair is yellow (right)                             | (y c) (l d b) (l d c) (g b)     |
+| 208 | 1 | Danny left the bag and the chair; it is green           | bag is green (left)                                 | (g b) (l d b) (l d c) (y c)     |
+| 208 | 2 | Danny left the bag and the chair; it is green           | bag is green (right)                                | (g b) (l d b) (l d c) (y c)     |
+| 208 | 3 | Danny left the bag and the chair; it is green           | chair is green (left)                               | (g c) (l d b) (l d c) (y b)     |
+| 208 | 4 | Danny left the bag and the chair; it is green           | chair is green (right)                              | (g c) (l d b) (l d c) (y b)     |
+| 209 | 1 | Andrei held the bag and the chair; it is yellow         | bag is yellow (left)                                | (y b) (h a b) (h a c) (g c)     |
+| 209 | 3 | Andrei held the bag and the chair; it is yellow         | chair is yellow (left)                              | (y c) (h a b) (h a c) (g b)     |
+| 210 | 1 | Andrei held the bag and the chair; it is green          | bag is green (left)                                 | (g b) (h a b) (h a c) (y c)     |
+| 210 | 3 | Andrei held the bag and the chair; it is green          | chair is green (left)                               | (g c) (h a b) (h a c) (y b)     |
+| 211 | 1 | Andrei moved the bag and the chair; it is yellow        | bag is yellow (left)                                | (y b) (m a b) (m a c) (g c)     |
+| 211 | 3 | Andrei moved the bag and the chair; it is yellow        | chair is yellow (left)                              | (y c) (m a b) (m a c) (g b)     |
+| 212 | 1 | Andrei moved the bag and the chair; it is green         | bag is green (left)                                 | (g b) (m a b) (m a c) (y c)     |
+| 212 | 3 | Andrei moved the bag and the chair; it is green         | chair is green (left)                               | (g c) (m a b) (m a c) (y b)     |
+| 213 | 1 | Andrei picked-up the bag and the chair; it is yellow    | bag is yellow (left)                                | (y b) (pu a b) (pu a c) (g c)   |
+| 213 | 3 | Andrei picked-up the bag and the chair; it is yellow    | chair is yellow (left)                              | (y c) (pu a b) (pu a c) (g b)   |
+| 214 | 1 | Andrei picked-up the bag and the chair; it is green     | bag is green (left)                                 | (g b) (pu a b) (pu a c) (y c)   |
+| 214 | 3 | Andrei picked-up the bag and the chair; it is green     | chair is green (left)                               | (g c) (pu a b) (pu a c) (y b)   |
+| 215 | 1 | Andrei put-down the bag and the chair; it is yellow     | bag is yellow (left)                                | (y b) (pd a b) (pd a c) (g c)   |
+| 215 | 3 | Andrei put-down the bag and the chair; it is yellow     | chair is yellow (left)                              | (y c) (pd a b) (pd a c) (g b)   |
+| 216 | 1 | Andrei put-down the bag and the chair; it is green      | bag is green (left)                                 | (g b) (pd a b) (pd a c) (y c)   |
+| 216 | 3 | Andrei put-down the bag and the chair; it is green      | chair is green (left)                               | (g c) (pd a b) (pd a c) (y b)   |
+| 217 | 1 | Andrei approached the bag and the chair; it is yellow   | bag is yellow (left)                                | (y b) (a a b) (a a c) (g c)     |
+| 217 | 2 | Andrei approached the bag and the chair; it is yellow   | bag is yellow (right)                               | (y b) (a a b) (a a c) (g c)     |
+| 217 | 3 | Andrei approached the bag and the chair; it is yellow   | chair is yellow (left)                              | (y c) (a a b) (a a c) (g b)     |
+| 217 | 4 | Andrei approached the bag and the chair; it is yellow   | chair is yellow (right)                             | (y c) (a a b) (a a c) (g b)     |
+| 218 | 1 | Andrei approached the bag and the chair; it is green    | bag is green (left)                                 | (g b) (a a b) (a a c) (y c)     |
+| 218 | 2 | Andrei approached the bag and the chair; it is green    | bag is green (right)                                | (g b) (a a b) (a a c) (y c)     |
+| 218 | 3 | Andrei approached the bag and the chair; it is green    | chair is green (left)                               | (g c) (a a b) (a a c) (y b)     |
+| 218 | 4 | Andrei approached the bag and the chair; it is green    | chair is green (right)                              | (g c) (a a b) (a a c) (y b)     |
+| 219 | 1 | Andrei left the bag and the chair; it is yellow         | bag is yellow (left)                                | (y b) (l a b) (l a c) (g c)     |
+| 219 | 2 | Andrei left the bag and the chair; it is yellow         | bag is yellow (right)                               | (y b) (l a b) (l a c) (g c)     |
+| 219 | 3 | Andrei left the bag and the chair; it is yellow         | chair is yellow (left)                              | (y c) (l a b) (l a c) (g b)     |
+| 219 | 4 | Andrei left the bag and the chair; it is yellow         | chair is yellow (right)                             | (y c) (l a b) (l a c) (g b)     |
+| 220 | 1 | Andrei left the bag and the chair; it is green          | bag is green (left)                                 | (g b) (l a b) (l a c) (y c)     |
+| 220 | 2 | Andrei left the bag and the chair; it is green          | bag is green (right)                                | (g b) (l a b) (l a c) (y c)     |
+| 220 | 3 | Andrei left the bag and the chair; it is green          | chair is green (left)                               | (g c) (l a b) (l a c) (y b)     |
+| 220 | 4 | Andrei left the bag and the chair; it is green          | chair is green (right)                              | (g c) (l a b) (l a c) (y b)     |
+| 221 | 1 | Danny approached Andrei; he held a telescope            | he refers to Danny (left)                           | (a d a) (h d t)                 |
+| 221 | 2 | Danny approached Andrei; he held a telescope            | he refers to Danny (right)                          | (a d a) (h d t)                 |
+| 221 | 3 | Danny approached Andrei; he held a telescope            | he refers to Andrei (left)                          | (a d a) (h a t)                 |
+| 221 | 4 | Danny approached Andrei; he held a telescope            | he refers to Andrei (right)                         | (a d a) (h a t)                 |
+| 222 | 1 | Danny approached Andrei; he held a bag                  | he refers to Danny (left)                           | (a d a) (h d b)                 |
+| 222 | 2 | Danny approached Andrei; he held a bag                  | he refers to Danny (right)                          | (a d a) (h d b)                 |
+| 222 | 3 | Danny approached Andrei; he held a bag                  | he refers to Andrei (left)                          | (a d a) (h a b)                 |
+| 222 | 4 | Danny approached Andrei; he held a bag                  | he refers to Andrei (right)                         | (a d a) (h a b)                 |
+| 223 | 1 | Danny approached Andrei; he held a chair                | he refers to Danny (left)                           | (a d a) (h d c)                 |
+| 223 | 2 | Danny approached Andrei; he held a chair                | he refers to Danny (right)                          | (a d a) (h d c)                 |
+| 223 | 3 | Danny approached Andrei; he held a chair                | he refers to Andrei (left)                          | (a d a) (h a c)                 |
+| 223 | 4 | Danny approached Andrei; he held a chair                | he refers to Andrei (right)                         | (a d a) (h a c)                 |
+| 224 | 1 | Danny left Andrei; he held a telescope                  | he refers to Danny (left)                           | (l d a) (h d t)                 |
+| 224 | 2 | Danny left Andrei; he held a telescope                  | he refers to Danny (right)                          | (l d a) (h d t)                 |
+| 224 | 3 | Danny left Andrei; he held a telescope                  | he refers to Andrei (left)                          | (l d a) (h a t)                 |
+| 224 | 4 | Danny left Andrei; he held a telescope                  | he refers to Andrei (right)                         | (l d a) (h a t)                 |
+| 225 | 1 | Danny left Andrei; he held a bag                        | he refers to Danny (left)                           | (l d a) (h d b)                 |
+| 225 | 2 | Danny left Andrei; he held a bag                        | he refers to Danny (right)                          | (l d a) (h d b)                 |
+| 225 | 3 | Danny left Andrei; he held a bag                        | he refers to Andrei (left)                          | (l d a) (h a b)                 |
+| 225 | 4 | Danny left Andrei; he held a bag                        | he refers to Andrei (right)                         | (l d a) (h a b)                 |
+| 226 | 1 | Danny left Andrei; he held a chair                      | he refers to Danny (left)                           | (l d a) (h d c)                 |
+| 226 | 2 | Danny left Andrei; he held a chair                      | he refers to Danny (right)                          | (l d a) (h d c)                 |
+| 226 | 3 | Danny left Andrei; he held a chair                      | he refers to Andrei (left)                          | (l d a) (h a c)                 |
+| 226 | 4 | Danny left Andrei; he held a chair                      | he refers to Andrei (right)                         | (l d a) (h a c)                 |
+| 227 | 1 | Andrei approached Danny; he held a telescope            | he refers to Andrei (left)                          | (a a d) (h a t)                 |
+| 227 | 2 | Andrei approached Danny; he held a telescope            | he refers to Andrei (right)                         | (a a d) (h a t)                 |
+| 227 | 3 | Andrei approached Danny; he held a telescope            | he refers to Danny (left)                           | (a a d) (h d t)                 |
+| 227 | 4 | Andrei approached Danny; he held a telescope            | he refers to Danny (right)                          | (a a d) (h d t)                 |
+| 228 | 1 | Andrei approached Danny; he held a bag                  | he refers to Andrei (left)                          | (a a d) (h a b)                 |
+| 228 | 2 | Andrei approached Danny; he held a bag                  | he refers to Andrei (right)                         | (a a d) (h a b)                 |
+| 228 | 3 | Andrei approached Danny; he held a bag                  | he refers to Danny (left)                           | (a a d) (h d b)                 |
+| 228 | 4 | Andrei approached Danny; he held a bag                  | he refers to Danny (right)                          | (a a d) (h d b)                 |
+| 229 | 1 | Andrei approached Danny; he held a chair                | he refers to Andrei (left)                          | (a a d) (h a c)                 |
+| 229 | 2 | Andrei approached Danny; he held a chair                | he refers to Andrei (right)                         | (a a d) (h a c)                 |
+| 229 | 3 | Andrei approached Danny; he held a chair                | he refers to Danny (left)                           | (a a d) (h d c)                 |
+| 229 | 4 | Andrei approached Danny; he held a chair                | he refers to Danny (right)                          | (a a d) (h d c)                 |
+| 230 | 1 | Andrei left Danny; he held a telescope                  | he refers to Andrei (left)                          | (l a d) (h a t)                 |
+| 230 | 2 | Andrei left Danny; he held a telescope                  | he refers to Andrei (right)                         | (l a d) (h a t)                 |
+| 230 | 3 | Andrei left Danny; he held a telescope                  | he refers to Danny (left)                           | (l a d) (h d t)                 |
+| 230 | 4 | Andrei left Danny; he held a telescope                  | he refers to Danny (right)                          | (l a d) (h d t)                 |
+| 231 | 1 | Andrei left Danny; he held a bag                        | he refers to Andrei (left)                          | (l a d) (h a b)                 |
+| 231 | 2 | Andrei left Danny; he held a bag                        | he refers to Andrei (right)                         | (l a d) (h a b)                 |
+| 231 | 3 | Andrei left Danny; he held a bag                        | he refers to Danny (left)                           | (l a d) (h d b)                 |
+| 231 | 4 | Andrei left Danny; he held a bag                        | he refers to Danny (right)                          | (l a d) (h d b)                 |
+| 232 | 1 | Andrei left Danny; he held a chair                      | he refers to Andrei (left)                          | (l a d) (h a c)                 |
+| 232 | 2 | Andrei left Danny; he held a chair                      | he refers to Andrei (right)                         | (l a d) (h a c)                 |
+| 232 | 3 | Andrei left Danny; he held a chair                      | he refers to Danny (left)                           | (l a d) (h d c)                 |
+| 232 | 4 | Andrei left Danny; he held a chair                      | he refers to Danny (right)                          | (l a d) (h d c)                 |
+| 233 | 1 | Danny looked at Andrei; also Yevgeni                    | Danny looks at Andrei and Yevgeni (left)            | (la d a) (la d y)               |
+| 233 | 2 | Danny looked at Andrei; also Yevgeni                    | Danny looks at Andrei and Yevgeni (right)           | (la d a) (la d y)               |
+| 233 | 3 | Danny looked at Andrei; also Yevgeni                    | Danny and Yevgeni look at Andrei (left)             | (la d a) (la y a)               |
+| 233 | 4 | Danny looked at Andrei; also Yevgeni                    | Danny and Yevgeni look at Andrei (right)            | (la d a) (la y a)               |
+| 234 | 1 | Danny looked at Yevgeni; also Andrei                    | Danny looks at Yevgeni and Andrei (left)            | (la d a) (la d y)               |
+| 234 | 2 | Danny looked at Yevgeni; also Andrei                    | Danny looks at Yevgeni and Andrei (right)           | (la d a) (la d y)               |
+| 234 | 3 | Danny looked at Yevgeni; also Andrei                    | Danny and Andrei look at Yevgeni (left)             | (la a y) (la d y)               |
+| 234 | 4 | Danny looked at Yevgeni; also Andrei                    | Danny and Andrei look at Yevgeni (right)            | (la a y) (la d y)               |
+| 235 | 1 | Andrei looked at Danny; also Yevgeni                    | Andrei looks at Danny and Yevgeni (left)            | (la a d) (la a y)               |
+| 235 | 2 | Andrei looked at Danny; also Yevgeni                    | Andrei looks at Danny and Yevgeni (right)           | (la a d) (la a y)               |
+| 235 | 3 | Andrei looked at Danny; also Yevgeni                    | Andrei and Yevgeni look at Danny (left)             | (la a d) (la y d)               |
+| 235 | 4 | Andrei looked at Danny; also Yevgeni                    | Andrei and Yevgeni look at Danny (right)            | (la a d) (la y d)               |
+| 236 | 1 | Andrei looked at Yevgeni; also Danny                    | Andrei looks at Yevgeni and Danny (left)            | (la a d) (la a y)               |
+| 236 | 2 | Andrei looked at Yevgeni; also Danny                    | Andrei looks at Yevgeni and Danny (right)           | (la a d) (la a y)               |
+| 236 | 3 | Andrei looked at Yevgeni; also Danny                    | Andrei and Danny look at Yevgeni (left)             | (la a y) (la d y)               |
+| 236 | 4 | Andrei looked at Yevgeni; also Danny                    | Andrei and Danny look at Yevgeni (right)            | (la a y) (la d y)               |
+| 237 | 1 | Yevgeni looked at Danny; also Andrei                    | Yevgeni looks at Danny and Andrei (left)            | (la y a) (la y d)               |
+| 237 | 2 | Yevgeni looked at Danny; also Andrei                    | Yevgeni looks at Danny and Andrei (right)           | (la y a) (la y d)               |
+| 237 | 3 | Yevgeni looked at Danny; also Andrei                    | Yevgeni and Andrei look at Danny (left)             | (la a d) (la y d)               |
+| 237 | 4 | Yevgeni looked at Danny; also Andrei                    | Yevgeni and Andrei look at Danny (right)            | (la a d) (la y d)               |
+| 238 | 1 | Yevgeni looked at Andrei; also Danny                    | Yevgeni looks at Andrei and Danny (left)            | (la y a) (la y d)               |
+| 238 | 2 | Yevgeni looked at Andrei; also Danny                    | Yevgeni looks at Andrei and Danny (right)           | (la y a) (la y d)               |
+| 238 | 3 | Yevgeni looked at Andrei; also Danny                    | Yevgeni and Danny look at Andrei (left)             | (la d a) (la y a)               |
+| 238 | 4 | Yevgeni looked at Andrei; also Danny                    | Yevgeni and Danny look at Andrei (right)            | (la d a) (la y a)               |
+| 239 | 1 | Danny approached Andrei; also Yevgeni                   | Danny approached Andrei and Yevgeni (left)          | (a d a) (a d y)                 |
+| 239 | 2 | Danny approached Andrei; also Yevgeni                   | Danny approached Andrei and Yevgeni (right)         | (a d a) (a d y)                 |
+| 239 | 3 | Danny approached Andrei; also Yevgeni                   | Danny and Yevgeni approached Andrei (left)          | (a d a) (a y a)                 |
+| 239 | 4 | Danny approached Andrei; also Yevgeni                   | Danny and Yevgeni approached Andrei (right)         | (a d a) (a y a)                 |
+| 240 | 1 | Danny approached Yevgeni; also Andrei                   | Danny approached Yevgeni and Andrei (left)          | (a d a) (a d y)                 |
+| 240 | 2 | Danny approached Yevgeni; also Andrei                   | Danny approached Yevgeni and Andrei (right)         | (a d a) (a d y)                 |
+| 240 | 3 | Danny approached Yevgeni; also Andrei                   | Danny and Andrei approached Yevgeni (left)          | (a a y) (a d y)                 |
+| 240 | 4 | Danny approached Yevgeni; also Andrei                   | Danny and Andrei approached Yevgeni (right)         | (a a y) (a d y)                 |
+| 241 | 1 | Danny left Andrei; also Yevgeni                         | Danny left Andrei and Yevgeni (left)                | (l d a) (l d y)                 |
+| 241 | 2 | Danny left Andrei; also Yevgeni                         | Danny left Andrei and Yevgeni (right)               | (l d a) (l d y)                 |
+| 241 | 3 | Danny left Andrei; also Yevgeni                         | Danny and Yevgeni left Andrei (left)                | (l d a) (l y a)                 |
+| 241 | 4 | Danny left Andrei; also Yevgeni                         | Danny and Yevgeni left Andrei (right)               | (l d a) (l y a)                 |
+| 242 | 1 | Danny left Yevgeni; also Andrei                         | Danny left Yevgeni and Andrei (left)                | (l d a) (l d y)                 |
+| 242 | 2 | Danny left Yevgeni; also Andrei                         | Danny left Yevgeni and Andrei (right)               | (l d a) (l d y)                 |
+| 242 | 3 | Danny left Yevgeni; also Andrei                         | Danny and Andrei left Yevgeni (left)                | (l a y) (l d y)                 |
+| 242 | 4 | Danny left Yevgeni; also Andrei                         | Danny and Andrei left Yevgeni (right)               | (l a y) (l d y)                 |
+| 243 | 1 | Andrei approached Danny; also Yevgeni                   | Andrei approached Danny and Yevgeni (left)          | (a a d) (a a y)                 |
+| 243 | 2 | Andrei approached Danny; also Yevgeni                   | Andrei approached Danny and Yevgeni (right)         | (a a d) (a a y)                 |
+| 243 | 3 | Andrei approached Danny; also Yevgeni                   | Andrei and Yevgeni approached Danny (left)          | (a a d) (a y d)                 |
+| 243 | 4 | Andrei approached Danny; also Yevgeni                   | Andrei and Yevgeni approached Danny (right)         | (a a d) (a y d)                 |
+| 244 | 1 | Andrei approached Yevgeni; also Danny                   | Andrei approached Yevgeni and Danny (left)          | (a a d) (a a y)                 |
+| 244 | 2 | Andrei approached Yevgeni; also Danny                   | Andrei approached Yevgeni and Danny (right)         | (a a d) (a a y)                 |
+| 244 | 3 | Andrei approached Yevgeni; also Danny                   | Andrei and Danny approached Yevgeni (left)          | (a a y) (a d y)                 |
+| 244 | 4 | Andrei approached Yevgeni; also Danny                   | Andrei and Danny approached Yevgeni (right)         | (a a y) (a d y)                 |
+| 245 | 1 | Andrei left Danny; also Yevgeni                         | Andrei left Danny and Yevgeni (left)                | (l a d) (l a y)                 |
+| 245 | 2 | Andrei left Danny; also Yevgeni                         | Andrei left Danny and Yevgeni (right)               | (l a d) (l a y)                 |
+| 245 | 3 | Andrei left Danny; also Yevgeni                         | Andrei and Yevgeni left Danny (left)                | (l a d) (l y d)                 |
+| 245 | 4 | Andrei left Danny; also Yevgeni                         | Andrei and Yevgeni left Danny (right)               | (l a d) (l y d)                 |
+| 246 | 1 | Andrei left Yevgeni; also Danny                         | Andrei left Yevgeni and Danny (left)                | (l a d) (l a y)                 |
+| 246 | 2 | Andrei left Yevgeni; also Danny                         | Andrei left Yevgeni and Danny (right)               | (l a d) (l a y)                 |
+| 246 | 3 | Andrei left Yevgeni; also Danny                         | Andrei and Danny left Yevgeni (left)                | (l a y) (l d y)                 |
+| 246 | 4 | Andrei left Yevgeni; also Danny                         | Andrei and Danny left Yevgeni (right)               | (l a y) (l d y)                 |
+| 247 | 1 | Yevgeni approached Danny; also Andrei                   | Yevgeni approached Danny and Andrei (left)          | (a y a) (a y d)                 |
+| 247 | 2 | Yevgeni approached Danny; also Andrei                   | Yevgeni approached Danny and Andrei (right)         | (a y a) (a y d)                 |
+| 247 | 3 | Yevgeni approached Danny; also Andrei                   | Yevgeni and Andrei approached Danny (left)          | (a a d) (a y d)                 |
+| 247 | 4 | Yevgeni approached Danny; also Andrei                   | Yevgeni and Andrei approached Danny (right)         | (a a d) (a y d)                 |
+| 248 | 1 | Yevgeni approached Andrei; also Danny                   | Yevgeni approached Andrei and Danny (left)          | (a y a) (a y d)                 |
+| 248 | 2 | Yevgeni approached Andrei; also Danny                   | Yevgeni approached Andrei and Danny (right)         | (a y a) (a y d)                 |
+| 248 | 3 | Yevgeni approached Andrei; also Danny                   | Yevgeni and Danny approached Andrei (left)          | (a d a) (a y a)                 |
+| 248 | 4 | Yevgeni approached Andrei; also Danny                   | Yevgeni and Danny approached Andrei (right)         | (a d a) (a y a)                 |
+| 249 | 1 | Yevgeni left Danny; also Andrei                         | Yevgeni left Danny and Andrei (left)                | (l y a) (l y d)                 |
+| 249 | 2 | Yevgeni left Danny; also Andrei                         | Yevgeni left Danny and Andrei (right)               | (l y a) (l y d)                 |
+| 249 | 3 | Yevgeni left Danny; also Andrei                         | Yevgeni and Andrei left Danny (left)                | (l a d) (l y d)                 |
+| 249 | 4 | Yevgeni left Danny; also Andrei                         | Yevgeni and Andrei left Danny (right)               | (l a d) (l y d)                 |
+| 250 | 1 | Yevgeni left Andrei; also Danny                         | Yevgeni left Andrei and Danny (left)                | (l y a) (l y d)                 |
+| 250 | 2 | Yevgeni left Andrei; also Danny                         | Yevgeni left Andrei and Danny (right)               | (l y a) (l y d)                 |
+| 250 | 3 | Yevgeni left Andrei; also Danny                         | Yevgeni and Danny left Andrei (left)                | (l d a) (l y a)                 |
+| 250 | 4 | Yevgeni left Andrei; also Danny                         | Yevgeni and Danny left Andrei (right)               | (l d a) (l y a)                 |
