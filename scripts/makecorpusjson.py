@@ -22,6 +22,13 @@ class Corpus:
     def get_sentence(self, sentenceID, variantID):
         return self.sentences[(sentenceID, variantID)]
 
+    def get_sentences_all_variants(self, sentenceID):
+        sentences = []
+        for (sentenceID, variantID), sentence in self.sentences.items():
+            if sentenceID == sentenceID:
+                sentences.append(sentence)
+        return sentences
+
     def to_json(self, output_filename):
         with open(output_filename, "w") as out:
             json.dump(map(lambda s: s.properties, self.sentences.values()), out, sort_keys=True, indent=2, separators=(',', ': '))
@@ -77,6 +84,22 @@ def parse_matching_file(filename, property_name, corpus):
                 if property_name not in sentence1props:
                     sentence1props[property_name] = []
                 sentence1props[property_name].append("%d,%d" % sentence2)
+
+def parse_syntactic_tree_file(filename, corpus):
+    with open(filename, 'r') as f:
+        for line in f:
+            if "|" in line:
+                ids, tree = line.split("|")
+                sentenceID = int(ids.split()[0])
+                variantIDs = map(int, ids.split()[1:])
+                for variantID in variantIDs:
+                    corpus.get_sentence(sentenceID, variantID).properties["syntactic_tree"] = tree.strip()
+            else:
+                # Only one parse for all variants
+                sentenceID, tree = line.split("\t")
+                sentenceID = int(sentenceID) + 1 # parser is 0-indexed instead of 1-indexed
+                for sentence in corpus.get_sentences_all_variants(sentenceID):
+                    sentence.properties["syntactic_tree"] = tree.strip()
             
             
 if __name__ == "__main__":
@@ -85,6 +108,8 @@ if __name__ == "__main__":
     parser.add_argument("mapping_file", help="A file in the format \"filenamepiece1 filenamepiece2 filenamepiece3 sentenceID variantID\"")
     parser.add_argument("equivalence_file", help="A file in the format \"sentenceID1 variantID1 sentenceID2 variantID2\"")
     parser.add_argument("contrasts_file", help="A file in the format \"sentenceID1 variantID1 sentenceID2 variantID2\"")
+    
+    parser.add_argument("syntactic_tree_file", help="A file in the format \"sentenceID variantID1 ... variantIDN | parse_tree\"")
 
     parser.add_argument("output_file", help="The output json file.")
 
@@ -95,5 +120,6 @@ if __name__ == "__main__":
     parse_mapping_file(args.mapping_file, corpus)
     parse_matching_file(args.equivalence_file, "equivalentVariants", corpus)
     parse_matching_file(args.contrasts_file, "contrastVariants", corpus)
+    parse_syntactic_tree_file(args.syntactic_tree_file, corpus)
     
     corpus.to_json(args.output_file)    
